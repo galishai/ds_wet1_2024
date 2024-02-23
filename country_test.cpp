@@ -6,6 +6,25 @@ int main(){
 
     std::cout << (int)olympus.add_country(700,11) << '\n'; // usa
     std::cout << (int)olympus.add_team(300, 700, Sport::SWIMMING) << '\n'; // usa
+    std::cout << (int)olympus.add_team(200, 700, Sport::SWIMMING) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant(1, 700, Sport::SWIMMING, 2) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant(2, 700, Sport::SWIMMING, 4) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant(3, 700, Sport::SWIMMING, 7) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant(4, 700, Sport::SWIMMING, 15) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant(5, 700, Sport::SWIMMING, 6) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant(6, 700, Sport::SWIMMING, 10) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant_to_team(300, 1) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant_to_team(300, 5) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant_to_team(300, 3) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant_to_team(200, 6) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant_to_team(200, 4) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant_to_team(200, 2) << '\n'; // usa
+    std::cout << (int)olympus.unite_teams(300,200);
+    int a = 0;
+
+    /*
+    std::cout << (int)olympus.add_country(700,11) << '\n'; // usa
+    std::cout << (int)olympus.add_team(300, 700, Sport::SWIMMING) << '\n'; // usa
     std::cout << (int)olympus.add_contestant(1, 700, Sport::SWIMMING, 2) << '\n'; // usa
     std::cout << (int)olympus.add_contestant(102, 700, Sport::SWIMMING, 4) << '\n'; // usa
     std::cout << (int)olympus.add_contestant(100, 700, Sport::SWIMMING, 7) << '\n'; // usa
@@ -25,6 +44,7 @@ int main(){
     std::cout << (int)olympus.add_contestant_to_team(300, 10) << '\n'; // usa
     std::cout << (int)olympus.add_contestant_to_team(300, 16) << '\n'; // usa
     std::cout << (int)olympus.austerity_measures(300).ans() << '\n'; // usa
+     */
 
     //TODO
 

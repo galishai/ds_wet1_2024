@@ -220,7 +220,7 @@ StatusType Olympics::add_contestant_to_team(int teamId,int contestantId){ //TODO
     }
     PlayerByID *playerIDInThird = new PlayerByID(playerNode->m_info->m_ID, playerNode->m_info->m_strength, playerNode->m_info->m_sport, playerNode->m_info->m_playerCountry);
     PlayerByStrength *playerSTRInThird = new PlayerByStrength(playerNode->m_info->m_ID, playerNode->m_info->m_strength, playerNode->m_info->m_sport, playerNode->m_info->m_playerCountry);
-    PlayerByStrength *playerSTRGen = new PlayerByStrength(playerNode->m_info->m_ID, playerNode->m_info->m_strength, playerNode->m_info->m_sport, playerNode->m_info->m_playerCountry);
+    //PlayerByStrength *playerSTRGen = new PlayerByStrength(playerNode->m_info->m_ID, playerNode->m_info->m_strength, playerNode->m_info->m_sport, playerNode->m_info->m_playerCountry);
     try
     {
         addPlayer(teamNode->m_info,playerIDInThird, playerSTRInThird);
@@ -651,12 +651,18 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     try
     {
         arrayMergedTeam12 = new PlayerByID *[sizeOfArray11 + sizeOfArray12 + sizeOfArray13 + sizeOfArray21 + sizeOfArray22 + sizeOfArray23];
-        arrayMergedTeam12 = {nullptr};
+        //arrayMergedTeam12 = {nullptr};
     } catch (std::bad_alloc &)
     {
         throw;
     }
 
+    assert(arrayMerged1123[0]->m_ID == 1);
+    assert(arrayMerged1123[1]->m_ID == 3);
+    assert(arrayMerged1123[2]->m_ID == 5);
+    assert(arrayMerged2123[0]->m_ID == 2);
+    assert(arrayMerged2123[1]->m_ID == 4);
+    assert(arrayMerged2123[2]->m_ID == 6);
     mergeTwoArraysIntoOne(arrayMerged1123, arrayMerged2123, arrayMergedTeam12, sizeOfArray11 + sizeOfArray12 + sizeOfArray13, sizeOfArray21 + sizeOfArray22 + sizeOfArray23);
     int true_length = 0;
     while(arrayMergedTeam12[true_length] != nullptr)
@@ -679,11 +685,11 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     int sizeOfFirstThird = true_length / 3;
     int sizeOfSecondThird = true_length / 3;
     int sizeOfLastThird = true_length / 3;
-    if(sizeOfLastThird % 3 == 1)
+    if(true_length % 3 == 1)
     {
         sizeOfFirstThird = true_length / 3 + 1;
     }
-    else if(sizeOfLastThird % 3 == 2)
+    else if(true_length % 3 == 2)
     {
         sizeOfFirstThird = true_length / 3 + 1;
         sizeOfSecondThird = true_length / 3 + 1;
@@ -697,15 +703,15 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     {
         trueMergedTeam12[i]->m_currentThird = 2;
     }
-    for(int i = sizeOfSecondThird; i < sizeOfFirstThird + sizeOfSecondThird + sizeOfLastThird; i++)
+    for(int i = sizeOfFirstThird + sizeOfSecondThird; i < sizeOfFirstThird + sizeOfSecondThird + sizeOfLastThird; i++)
     {
         trueMergedTeam12[i]->m_currentThird = 3;
     }
     Node<PlayerByID> *new_rootID1 = mergedArrayIntoBalTree(trueMergedTeam12, 0, sizeOfFirstThird - 1);
     Node<PlayerByID> *new_rootID2 = mergedArrayIntoBalTree(trueMergedTeam12, sizeOfFirstThird,
-                                                           sizeOfSecondThird - 1);
-    Node<PlayerByID> *new_rootID3 = mergedArrayIntoBalTree(trueMergedTeam12, sizeOfSecondThird,
-                                                           sizeOfLastThird - 1);
+                                                           sizeOfFirstThird + sizeOfSecondThird - 1);
+    Node<PlayerByID> *new_rootID3 = mergedArrayIntoBalTree(trueMergedTeam12, sizeOfFirstThird + sizeOfSecondThird,
+                                                           sizeOfFirstThird + sizeOfSecondThird + sizeOfLastThird - 1);
 
     PlayerByID **arrayPtrUpdate1;
     try
@@ -753,7 +759,7 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     try
     {
         arrayMergedSTRGen = new PlayerByStrength *[team1InCountry->m_info->m_playersBySTR->m_treeSize + team2InCountry->m_info->m_playersBySTR->m_treeSize];
-        arrayMergedSTRGen = {nullptr};
+        //arrayMergedSTRGen = {nullptr};
     } catch (std::bad_alloc &)
     {
         throw;
@@ -854,7 +860,7 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     PlayerByStrength **arrayToUpdate2;
     try
     {
-        arrayToUpdate2 = new PlayerByStrength *[sizeOfFirstThird];
+        arrayToUpdate2 = new PlayerByStrength *[sizeOfSecondThird];
     } catch (std::bad_alloc &)
     {
         throw;
