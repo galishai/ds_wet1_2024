@@ -50,14 +50,14 @@ static int max(int a, int b)
     return a >= b ? a : b;
 }
 
-static int absval(int a)
+/*static int absval(int a)
 {
     if (a < 0)
     {
         return -a;
     }
     return a;
-}
+}*/
 
 template<class T>
 int getHeight(Node<T> *node)
@@ -69,10 +69,10 @@ int getHeight(Node<T> *node)
     return node->m_height;
 }
 
-static int total_games(int gamesPlayed, int newTeamGames, int prevGames)
+/*static int total_games(int gamesPlayed, int newTeamGames, int prevGames)
 {
     return gamesPlayed - newTeamGames + prevGames;
-}
+}*/
 
 
 #endif //HW_WET_NODE_H

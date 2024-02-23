@@ -421,7 +421,7 @@ void AVLTree<T>::removeNode(T *info) //based on assumption that such info alread
         delete nodeToRemove->m_info;
         delete nodeToRemove;
 
-        Node<T>* tempLeft = temp->m_left;
+        //Node<T>* tempLeft = temp->m_left;
         if(flag)
         {
             while (tempFather != nullptr)
