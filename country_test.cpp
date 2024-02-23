@@ -1,8 +1,34 @@
 #include "Olympicsa1.h"
-#include <iostream>
+#include "../../../../../../../../../../Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream"
 
 int main(){
     Olympics olympus;
+
+    std::cout << (int)olympus.add_country(700,11) << '\n'; // usa
+    std::cout << (int)olympus.add_team(300, 700, Sport::SWIMMING) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant(1, 700, Sport::SWIMMING, 2) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant(102, 700, Sport::SWIMMING, 4) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant(100, 700, Sport::SWIMMING, 7) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant(20, 700, Sport::SWIMMING, 15) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant(101, 700, Sport::SWIMMING, 6) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant(10, 700, Sport::SWIMMING, 10) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant(4, 700, Sport::SWIMMING, 5) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant(16, 700, Sport::SWIMMING, 11) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant(6, 700, Sport::SWIMMING, 3) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant_to_team(300, 1) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant_to_team(300, 100) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant_to_team(300, 101) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant_to_team(300, 4) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant_to_team(300, 6) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant_to_team(300, 102) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant_to_team(300, 20) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant_to_team(300, 10) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant_to_team(300, 16) << '\n'; // usa
+    std::cout << (int)olympus.austerity_measures(300).ans() << '\n'; // usa
+
+    //TODO
+
+
     // trying successful things.
     std::cout << (int)olympus.add_country(1,1) << '\n'; // usa
     std::cout << (int)olympus.add_country(40,2) << '\n'; // romania
