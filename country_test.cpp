@@ -18,8 +18,8 @@ int main(){
     std::cout << (int)olympus.add_contestant_to_team(300, 1) << '\n'; // usa
     std::cout << (int)olympus.add_contestant_to_team(300, 100) << '\n'; // usa
     std::cout << (int)olympus.add_contestant_to_team(300, 101) << '\n'; // usa
-    std::cout << (int)olympus.add_contestant_to_team(300, 4) << '\n'; // usa
     std::cout << (int)olympus.add_contestant_to_team(300, 6) << '\n'; // usa
+    std::cout << (int)olympus.add_contestant_to_team(300, 4) << '\n'; // usa
     std::cout << (int)olympus.add_contestant_to_team(300, 102) << '\n'; // usa
     std::cout << (int)olympus.add_contestant_to_team(300, 20) << '\n'; // usa
     std::cout << (int)olympus.add_contestant_to_team(300, 10) << '\n'; // usa
@@ -28,7 +28,7 @@ int main(){
 
     //TODO
 
-
+/*
     // trying successful things.
     std::cout << (int)olympus.add_country(1,1) << '\n'; // usa
     std::cout << (int)olympus.add_country(40,2) << '\n'; // romania
@@ -68,4 +68,5 @@ int main(){
     std::cout << (int)olympus.remove_country(254) << '\n'; // kenya
     std::cout << (int)olympus.remove_country(359) << "\n\n"; // bulgaria
     return 0;
+    */
 }

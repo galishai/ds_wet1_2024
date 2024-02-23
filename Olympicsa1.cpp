@@ -1017,7 +1017,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
         return StatusType::FAILURE;
     }
     Node<Team> *teamInCountryNode = team->m_info->m_teamCountry->m_countryTeams->findNode(&checkIfExists);
-    int size = team->m_info->m_firstThirdID->m_treeSize + team->m_info->m_secondThirdID->m_treeSize + team->m_info->m_lastThirdID->m_treeSize;
+    int size = teamInCountryNode->m_info->m_firstThirdID->m_treeSize + teamInCountryNode->m_info->m_secondThirdID->m_treeSize + teamInCountryNode->m_info->m_lastThirdID->m_treeSize;
     if (size < 3)
     {
         return StatusType::FAILURE;
@@ -1254,7 +1254,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
          //1,2,0
 
          max1 = teamInCountry->m_firstThirdMax1STR->m_strength;
-         max2 = maxg(teamInCountry->m_secondThirdMax1STR->m_strength, teamInCountry->m_lastThird3rdMinID->m_strength);
+         max2 = maxg(teamInCountry->m_secondThirdMax1STR->m_strength, teamInCountry->m_lastThird1stMinID->m_strength);
          if(teamInCountry->m_lastThirdMax1STR->m_ID == teamInCountry->m_lastThird1stMinID->m_ID)
          {
              max3 = teamInCountry->m_lastThirdMax2STR->m_strength;
