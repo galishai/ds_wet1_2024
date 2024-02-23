@@ -656,13 +656,6 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     {
         throw;
     }
-
-    assert(arrayMerged1123[0]->m_ID == 1);
-    assert(arrayMerged1123[1]->m_ID == 3);
-    assert(arrayMerged1123[2]->m_ID == 5);
-    assert(arrayMerged2123[0]->m_ID == 2);
-    assert(arrayMerged2123[1]->m_ID == 4);
-    assert(arrayMerged2123[2]->m_ID == 6);
     mergeTwoArraysIntoOne(arrayMerged1123, arrayMerged2123, arrayMergedTeam12, sizeOfArray11 + sizeOfArray12 + sizeOfArray13, sizeOfArray21 + sizeOfArray22 + sizeOfArray23);
     int true_length = 0;
     while(arrayMergedTeam12[true_length] != nullptr)
