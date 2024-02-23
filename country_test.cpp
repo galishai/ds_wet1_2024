@@ -1,5 +1,5 @@
 #include "Olympicsa1.h"
-#include "../../../../../../../../../../Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream"
+#include <iostream>
 
 int main(){
     Olympics olympus;
