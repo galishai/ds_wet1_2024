@@ -863,7 +863,7 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
 
     for(i = 0; i < sizeOfSecondThird; i++)
     {
-        arrayToUpdate2[i]->m_playerInIDThird->m_StrengthVersionThird = arrayToUpdate1[i];
+        arrayToUpdate2[i]->m_playerInIDThird->m_StrengthVersionThird = arrayToUpdate2[i];
     }
 
     PlayerByStrength **arrayToUpdate3;
