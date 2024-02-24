@@ -541,7 +541,7 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     Team checkIfExists1(teamId1, Sport::SWIMMING);
     Team checkIfExists2(teamId2, Sport::SWIMMING);
     Node<Team> *team1 = m_Teams->findNode(&checkIfExists1);
-    Node<Team> *team2 = m_Teams->findNode(&checkIfExists1);
+    Node<Team> *team2 = m_Teams->findNode(&checkIfExists2);
     if (team1 == nullptr || team2 == nullptr)
     {
         return StatusType::FAILURE;
