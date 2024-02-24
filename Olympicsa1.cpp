@@ -121,13 +121,13 @@ StatusType Olympics::remove_team(int teamId){
         }
         Country *teamCountry = toBeRemovedGen->m_info->m_teamCountry;
         Team* teamInCountry = teamCountry->m_countryTeams->findNode(checkIfExists)->m_info;
-        delete checkIfExists;
         if(!teamInCountry->m_firstThirdID->isEmpty())
         {
             return StatusType::FAILURE;
         }
-        teamInCountry->m_teamCountry->m_countryTeams->removeNode(teamInCountry);
-        m_Teams->removeNode(teamInCountry);
+        teamInCountry->m_teamCountry->m_countryTeams->removeNode(checkIfExists);
+        m_Teams->removeNode(checkIfExists);
+        delete checkIfExists;
     } catch (std::bad_alloc &)
     {
         return StatusType::ALLOCATION_ERROR;
