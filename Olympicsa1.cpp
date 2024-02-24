@@ -652,6 +652,10 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     {
         arrayMergedTeam12 = new PlayerByID *[sizeOfArray11 + sizeOfArray12 + sizeOfArray13 + sizeOfArray21 + sizeOfArray22 + sizeOfArray23];
         //arrayMergedTeam12 = {nullptr};
+        for (int i = 0; i < sizeOfArray11 + sizeOfArray12 + sizeOfArray13 + sizeOfArray21 + sizeOfArray22 + sizeOfArray23; i++)
+        {
+            arrayMergedTeam12[i] = nullptr;
+        }
     } catch (std::bad_alloc &)
     {
         throw;
@@ -706,26 +710,57 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     Node<PlayerByID> *new_rootID3 = mergedArrayIntoBalTree(trueMergedTeam12, sizeOfFirstThird + sizeOfSecondThird,
                                                            sizeOfFirstThird + sizeOfSecondThird + sizeOfLastThird - 1);
 
-    PlayerByID **arrayPtrUpdate1;
+    PlayerByID **arrayPtrUpdate11;
     try
     {
-        arrayPtrUpdate1 = new PlayerByID *[sizeOfFirstThird];
+        arrayPtrUpdate11 = new PlayerByID *[sizeOfFirstThird];
     } catch (std::bad_alloc &)
     {
         throw;
     }
-    InorderTransversalIntoArray(new_rootID1, arrayPtrUpdate1, sizeOfFirstThird, 0);
+    InorderTransversalIntoArray(new_rootID1, arrayPtrUpdate11, sizeOfFirstThird, 0);
     for(int i = 0; i < sizeOfFirstThird; i++)
     {
-        arrayPtrUpdate1[i]->m_StrengthVersionThird->m_playerInIDThird = arrayPtrUpdate1[i];
-        arrayPtrUpdate1[i]->m_StrengthVersionTeamGen->m_playerInIDThird = arrayPtrUpdate1[i];
+        arrayPtrUpdate11[i]->m_StrengthVersionThird->m_playerInIDThird = arrayPtrUpdate11[i];
+        arrayPtrUpdate11[i]->m_StrengthVersionTeamGen->m_playerInIDThird = arrayPtrUpdate11[i];
     }
-    delete team1InCountry->m_info->m_firstThirdID;
-    delete team1InCountry->m_info->m_secondThirdID;
-    delete team1InCountry->m_info->m_lastThirdID;
+    PlayerByID **arrayPtrUpdate12;
+    try
+    {
+        arrayPtrUpdate12 = new PlayerByID *[sizeOfSecondThird];
+    } catch (std::bad_alloc &)
+    {
+        throw;
+    }
+    InorderTransversalIntoArray(new_rootID2, arrayPtrUpdate12, sizeOfSecondThird, 0);
+    for(int i = 0; i < sizeOfFirstThird; i++)
+    {
+        arrayPtrUpdate12[i]->m_StrengthVersionThird->m_playerInIDThird = arrayPtrUpdate12[i];
+        arrayPtrUpdate12[i]->m_StrengthVersionTeamGen->m_playerInIDThird = arrayPtrUpdate12[i];
+    }
+    PlayerByID **arrayPtrUpdate13;
+    try
+    {
+        arrayPtrUpdate13 = new PlayerByID *[sizeOfLastThird];
+    } catch (std::bad_alloc &)
+    {
+        throw;
+    }
+    InorderTransversalIntoArray(new_rootID3, arrayPtrUpdate13, sizeOfFirstThird, 0);
+    for(int i = 0; i < sizeOfFirstThird; i++)
+    {
+        arrayPtrUpdate13[i]->m_StrengthVersionThird->m_playerInIDThird = arrayPtrUpdate13[i];
+        arrayPtrUpdate13[i]->m_StrengthVersionTeamGen->m_playerInIDThird = arrayPtrUpdate13[i];
+    }
+    //delete team1InCountry->m_info->m_firstThirdID;
+    //delete team1InCountry->m_info->m_secondThirdID;
+    //delete team1InCountry->m_info->m_lastThirdID;
     team1InCountry->m_info->m_firstThirdID->m_root = new_rootID1;
+    team1InCountry->m_info->m_firstThirdID->m_treeSize = sizeOfFirstThird;
     team1InCountry->m_info->m_secondThirdID->m_root = new_rootID2;
+    team1InCountry->m_info->m_secondThirdID->m_treeSize = sizeOfSecondThird;
     team1InCountry->m_info->m_lastThirdID->m_root = new_rootID3;
+    team1InCountry->m_info->m_lastThirdID->m_treeSize = sizeOfLastThird;
 
     PlayerByStrength **arraySTRGen1;
     try
@@ -753,6 +788,10 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     {
         arrayMergedSTRGen = new PlayerByStrength *[team1InCountry->m_info->m_playersBySTR->m_treeSize + team2InCountry->m_info->m_playersBySTR->m_treeSize];
         //arrayMergedSTRGen = {nullptr};
+        for(int i = 0; i < team1InCountry->m_info->m_playersBySTR->m_treeSize + team2InCountry->m_info->m_playersBySTR->m_treeSize; i++)
+        {
+            arrayMergedSTRGen[i] = nullptr;
+        }
     } catch (std::bad_alloc &)
     {
         throw;
@@ -829,65 +868,68 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
 
 
     Node<PlayerByStrength> *new_rootSTR1 = mergedArrayIntoBalTree(arraySTR1New, 0, sizeOfFirstThird - 1);
-    Node<PlayerByStrength> *new_rootSTR2 = mergedArrayIntoBalTree(arraySTR2New, sizeOfSecondThird,
-                                                           sizeOfSecondThird - 1);
-    Node<PlayerByStrength> *new_rootSTR3 = mergedArrayIntoBalTree(arraySTR3New, sizeOfLastThird,
+    Node<PlayerByStrength> *new_rootSTR2 = mergedArrayIntoBalTree(arraySTR2New, 0,
+                                                                  sizeOfSecondThird - 1);
+    Node<PlayerByStrength> *new_rootSTR3 = mergedArrayIntoBalTree(arraySTR3New, 0,
                                                            sizeOfLastThird - 1);
 
-    PlayerByStrength **arrayToUpdate1;
+    PlayerByStrength **arrayToUpdate21;
     try
     {
-        arrayToUpdate1 = new PlayerByStrength *[sizeOfFirstThird];
+        arrayToUpdate21 = new PlayerByStrength *[sizeOfFirstThird];
     } catch (std::bad_alloc &)
     {
         throw;
     }
 
-    InorderTransversalIntoArray(new_rootSTR1, arrayToUpdate1, sizeOfFirstThird, 0);
+    InorderTransversalIntoArray(new_rootSTR1, arrayToUpdate21, sizeOfFirstThird, 0);
 
     for(i = 0; i < sizeOfFirstThird; i++)
     {
-        arrayToUpdate1[i]->m_playerInIDThird->m_StrengthVersionThird = arrayToUpdate1[i];
+        arrayToUpdate21[i]->m_playerInIDThird->m_StrengthVersionThird = arrayToUpdate21[i];
     }
 
-    PlayerByStrength **arrayToUpdate2;
+    PlayerByStrength **arrayToUpdate22;
     try
     {
-        arrayToUpdate2 = new PlayerByStrength *[sizeOfSecondThird];
+        arrayToUpdate22 = new PlayerByStrength *[sizeOfSecondThird];
     } catch (std::bad_alloc &)
     {
         throw;
     }
 
-    InorderTransversalIntoArray(new_rootSTR2, arrayToUpdate2, sizeOfSecondThird, 0);
+    InorderTransversalIntoArray(new_rootSTR2, arrayToUpdate22, sizeOfSecondThird, 0);
 
     for(i = 0; i < sizeOfSecondThird; i++)
     {
-        arrayToUpdate2[i]->m_playerInIDThird->m_StrengthVersionThird = arrayToUpdate2[i];
+        arrayToUpdate22[i]->m_playerInIDThird->m_StrengthVersionThird = arrayToUpdate22[i];
     }
 
-    PlayerByStrength **arrayToUpdate3;
+    PlayerByStrength **arrayToUpdate23;
     try
     {
-        arrayToUpdate3 = new PlayerByStrength *[sizeOfLastThird];
+        arrayToUpdate23 = new PlayerByStrength *[sizeOfLastThird];
     } catch (std::bad_alloc &)
     {
         throw;
     }
 
-    InorderTransversalIntoArray(new_rootSTR3, arrayToUpdate3, sizeOfLastThird, 0);
+    InorderTransversalIntoArray(new_rootSTR3, arrayToUpdate23, sizeOfLastThird, 0);
 
     for(i = 0; i < sizeOfLastThird; i++)
     {
-        arrayToUpdate3[i]->m_playerInIDThird->m_StrengthVersionThird = arrayToUpdate3[i];
+        arrayToUpdate23[i]->m_playerInIDThird->m_StrengthVersionThird = arrayToUpdate23[i];
     }
 
-    delete team1InCountry->m_info->m_firstThirdSTR;
-    delete team1InCountry->m_info->m_secondThirdSTR;
-    delete team1InCountry->m_info->m_lastThirdSTR;
+    //delete team1InCountry->m_info->m_firstThirdSTR;
+    //delete team1InCountry->m_info->m_secondThirdSTR;
+    //delete team1InCountry->m_info->m_lastThirdSTR;
     team1InCountry->m_info->m_firstThirdSTR->m_root = new_rootSTR1;
+    team1InCountry->m_info->m_firstThirdSTR->m_treeSize = sizeOfFirstThird;
     team1InCountry->m_info->m_secondThirdSTR->m_root = new_rootSTR2;
+    team1InCountry->m_info->m_secondThirdSTR->m_treeSize = sizeOfSecondThird;
     team1InCountry->m_info->m_lastThirdSTR->m_root = new_rootSTR3;
+    team1InCountry->m_info->m_lastThirdSTR->m_treeSize = sizeOfLastThird;
 
     Node<PlayerByStrength> *new_rootSTRGen = mergedArrayIntoBalTree(trueMergedTeamSTR, 0, true_length);
 
@@ -909,6 +951,7 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
 
     delete team1InCountry->m_info->m_playersBySTR;
     team1InCountry->m_info->m_playersBySTR->m_root = new_rootSTRGen;
+    team1InCountry->m_info->m_playersBySTR->m_treeSize = sizeOfFirstThird + sizeOfSecondThird + sizeOfLastThird;
 
 
     //in the end
