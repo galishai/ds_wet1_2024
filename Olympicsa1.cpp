@@ -114,18 +114,20 @@ StatusType Olympics::remove_team(int teamId){
     {
         Team *checkIfExists;
         checkIfExists = new Team(/*0*/teamId, Sport::SWIMMING);////////////
-        Node<Team> *toBeRemoved = m_Teams->findNode(checkIfExists);
+        Node<Team> *toBeRemovedGen = m_Teams->findNode(checkIfExists);
+        if (toBeRemovedGen == nullptr)
+        {
+            return StatusType::FAILURE;
+        }
+        Country *teamCountry = toBeRemovedGen->m_info->m_teamCountry;
+        Team* teamInCountry = teamCountry->m_countryTeams->findNode(checkIfExists)->m_info;
         delete checkIfExists;
-        if (toBeRemoved == nullptr)
+        if(!teamInCountry->m_firstThirdID->isEmpty())
         {
             return StatusType::FAILURE;
         }
-        if(!toBeRemoved->m_info->m_firstThirdID->isEmpty())
-        {
-            return StatusType::FAILURE;
-        }
-        toBeRemoved->m_info->m_teamCountry->m_countryTeams->removeNode(toBeRemoved->m_info);
-        m_Teams->removeNode(toBeRemoved->m_info);
+        teamInCountry->m_teamCountry->m_countryTeams->removeNode(teamInCountry);
+        m_Teams->removeNode(teamInCountry);
     } catch (std::bad_alloc &)
     {
         return StatusType::ALLOCATION_ERROR;
@@ -248,7 +250,7 @@ StatusType Olympics::add_contestant_to_team(int teamId,int contestantId){ //TODO
 StatusType Olympics::remove_contestant_from_team(int teamId,int contestantId){
     if(teamId <= 0 || contestantId <= 0)
     {
-        return StatusType::FAILURE;
+        return StatusType::INVALID_INPUT;
     }
 
     PlayerByID playerFinder(contestantId, 0, Sport::SWIMMING, nullptr);
@@ -381,25 +383,37 @@ StatusType Olympics::update_contestant_strength(int contestantId ,int change){ /
             {
                 player->m_team2->m_firstThirdSTR->removeNode(&p2);
                 player->m_team2->m_firstThirdSTR->insertNode(updatedSTRThird2);
+                player->m_team2->m_playersBySTR->removeNode(&p2);
+                player->m_team2->m_playersBySTR->insertNode(updatedSTRGen2);
+                updatedSTRThird2->m_playerInIDThird = p->m_info;
+                p->m_info->m_StrengthVersionThird = updatedSTRThird2;
+                p->m_info->m_StrengthVersionTeamGen = updatedSTRGen2;
+                updatedSTRGen2->m_playerInIDThird = p->m_info;
             }
             p = player->m_team1->m_secondThirdID->findNode(player);
             if (p != nullptr)
             {
                 player->m_team2->m_secondThirdSTR->removeNode(&p2);
                 player->m_team2->m_secondThirdSTR->insertNode(updatedSTRThird2);
+                player->m_team2->m_playersBySTR->removeNode(&p2);
+                player->m_team2->m_playersBySTR->insertNode(updatedSTRGen2);
+                updatedSTRThird2->m_playerInIDThird = p->m_info;
+                p->m_info->m_StrengthVersionThird = updatedSTRThird2;
+                p->m_info->m_StrengthVersionTeamGen = updatedSTRGen2;
+                updatedSTRGen2->m_playerInIDThird = p->m_info;
             }
             p = player->m_team2->m_lastThirdID->findNode(player);
             if (p != nullptr)
             {
                 player->m_team2->m_lastThirdSTR->removeNode(&p2);
                 player->m_team2->m_lastThirdSTR->insertNode(updatedSTRThird2);
+                player->m_team2->m_playersBySTR->removeNode(&p2);
+                player->m_team2->m_playersBySTR->insertNode(updatedSTRGen2);
+                updatedSTRThird2->m_playerInIDThird = p->m_info;
+                p->m_info->m_StrengthVersionThird = updatedSTRThird2;
+                p->m_info->m_StrengthVersionTeamGen = updatedSTRGen2;
+                updatedSTRGen2->m_playerInIDThird = p->m_info;
             }
-            player->m_team2->m_playersBySTR->removeNode(&p2);
-            player->m_team2->m_playersBySTR->insertNode(updatedSTRGen2);
-            updatedSTRThird2->m_playerInIDThird = p->m_info;
-            p->m_info->m_StrengthVersionThird = updatedSTRThird2;
-            p->m_info->m_StrengthVersionTeamGen = updatedSTRGen2;
-            updatedSTRGen2->m_playerInIDThird = p->m_info;
             updateMinMax(player->m_team2);////////////
         }
         if (player->m_team3 != nullptr)
@@ -414,25 +428,37 @@ StatusType Olympics::update_contestant_strength(int contestantId ,int change){ /
             {
                 player->m_team3->m_firstThirdSTR->removeNode(&p3);
                 player->m_team3->m_firstThirdSTR->insertNode(updatedSTRThird3);
+                player->m_team3->m_playersBySTR->removeNode(&p3);
+                player->m_team3->m_playersBySTR->insertNode(updatedSTRGen3);
+                updatedSTRThird3->m_playerInIDThird = p->m_info;
+                p->m_info->m_StrengthVersionThird = updatedSTRThird3;
+                p->m_info->m_StrengthVersionTeamGen = updatedSTRGen3;
+                updatedSTRGen3->m_playerInIDThird = p->m_info;
             }
             p = player->m_team3->m_secondThirdID->findNode(player);
             if (p != nullptr)
             {
                 player->m_team3->m_secondThirdSTR->removeNode(&p3);
                 player->m_team3->m_secondThirdSTR->insertNode(updatedSTRThird3);
+                player->m_team3->m_playersBySTR->removeNode(&p3);
+                player->m_team3->m_playersBySTR->insertNode(updatedSTRGen3);
+                updatedSTRThird3->m_playerInIDThird = p->m_info;
+                p->m_info->m_StrengthVersionThird = updatedSTRThird3;
+                p->m_info->m_StrengthVersionTeamGen = updatedSTRGen3;
+                updatedSTRGen3->m_playerInIDThird = p->m_info;
             }
             p = player->m_team1->m_lastThirdID->findNode(player);
             if (p != nullptr)
             {
                 player->m_team3->m_lastThirdSTR->removeNode(&p3);
                 player->m_team3->m_lastThirdSTR->insertNode(updatedSTRThird3);
+                player->m_team3->m_playersBySTR->removeNode(&p3);
+                player->m_team3->m_playersBySTR->insertNode(updatedSTRGen3);
+                updatedSTRThird3->m_playerInIDThird = p->m_info;
+                p->m_info->m_StrengthVersionThird = updatedSTRThird3;
+                p->m_info->m_StrengthVersionTeamGen = updatedSTRGen3;
+                updatedSTRGen3->m_playerInIDThird = p->m_info;
             }
-            player->m_team3->m_playersBySTR->removeNode(&p3);
-            player->m_team3->m_playersBySTR->insertNode(updatedSTRGen3);
-            updatedSTRThird3->m_playerInIDThird = p->m_info;
-            p->m_info->m_StrengthVersionThird = updatedSTRThird3;
-            p->m_info->m_StrengthVersionTeamGen = updatedSTRGen3;
-            updatedSTRGen3->m_playerInIDThird = p->m_info;
             updateMinMax(player->m_team3);////////////
         }
         player->m_strength = new_strength;

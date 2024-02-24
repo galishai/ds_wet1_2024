@@ -1,7 +1,4 @@
-#include "Contestant.hpp"
-#include "Country.hpp"
 #include <iostream>
-#include "AVLTree.hpp"
 #include "Olympicsa1.h"
 int main(){
     Olympics olympus;

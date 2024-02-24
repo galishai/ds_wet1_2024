@@ -207,6 +207,7 @@ static void addPlayer(Team* team, PlayerByID *playerID, PlayerByStrength *player
                 team->m_secondThirdSTR->removeNode(targetSTR);
                 team->m_lastThirdID->insertNode(movePlayerID);
                 team->m_lastThirdSTR->insertNode(movePlayerSTR);
+                playerID->m_currentThird = 2;
                 movePlayerID->m_currentThird = 3;
             }
             else
@@ -246,6 +247,7 @@ static void addPlayer(Team* team, PlayerByID *playerID, PlayerByStrength *player
                 team->m_lastThirdID->insertNode(movePlayerID2);
                 team->m_lastThirdSTR->insertNode(movePlayerSTR2);
                 movePlayerID2->m_currentThird = 3;
+                playerID->m_currentThird = 1;
             }
         } else if (*playerID < team->m_firstThirdID->maxNode(team->m_firstThirdID->m_root)->m_info)
         {
@@ -935,6 +937,7 @@ static void updateMinMax(Team *team)
         team->m_firstThirdMax1ID = max1cCopy;
         max1cCopy->m_StrengthVersionThird = maxNode7->m_info->m_StrengthVersionThird;
         max1cCopy->m_StrengthVersionTeamGen = maxNode7->m_info->m_StrengthVersionTeamGen;
+        max1cCopy->m_currentThird = maxNode7->m_info->m_currentThird;
         maxNode7->m_info->m_StrengthVersionThird->m_playerInIDThird = max1cCopy;
         maxNode7->m_info->m_StrengthVersionTeamGen->m_playerInIDThird = max1cCopy;
         if(team->m_firstThirdMax1ID == maxNode7->m_info)
@@ -999,6 +1002,7 @@ static void updateMinMax(Team *team)
         team->m_secondThirdMax1ID = max1dCopy;
         max1dCopy->m_StrengthVersionThird = maxNode9->m_info->m_StrengthVersionThird;
         max1dCopy->m_StrengthVersionTeamGen = maxNode9->m_info->m_StrengthVersionTeamGen;
+        max1dCopy->m_currentThird = maxNode9->m_info->m_currentThird;
         maxNode9->m_info->m_StrengthVersionThird->m_playerInIDThird = max1dCopy;
         maxNode9->m_info->m_StrengthVersionTeamGen->m_playerInIDThird = max1dCopy;
         if(team->m_secondThirdMax1ID == maxNode9->m_info)
@@ -1063,6 +1067,7 @@ static void updateMinMax(Team *team)
         team->m_lastThirdMax1ID = max1fCopy;
         max1fCopy->m_StrengthVersionThird = maxNode11->m_info->m_StrengthVersionThird;
         max1fCopy->m_StrengthVersionTeamGen = maxNode11->m_info->m_StrengthVersionTeamGen;
+        max1fCopy->m_currentThird = maxNode11->m_info->m_currentThird;
         maxNode11->m_info->m_StrengthVersionThird->m_playerInIDThird = max1fCopy;
         maxNode11->m_info->m_StrengthVersionTeamGen->m_playerInIDThird = max1fCopy;
         if(team->m_lastThirdMax1ID == maxNode11->m_info)
