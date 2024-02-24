@@ -1,9 +1,9 @@
-#include "Contestant.hpp"
-#include "Contestant.cpp"
-#include "Country.hpp"
+#include "Player.h"
+#include "Player.cpp"
+#include "Country.h"
 #include "Country.cpp"
 #include <iostream>
-#include "AVLTree.hpp"
+#include "AVLTree.h"
 #include "Olympicsa1.h"
 #include "Olympicsa1.cpp"
 #include "Team.cpp"
