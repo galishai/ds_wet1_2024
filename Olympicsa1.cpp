@@ -203,13 +203,12 @@ StatusType Olympics::add_contestant_to_team(int teamId,int contestantId){ //TODO
     Team teamFinder(teamId, Sport::SPINNING);
     Node<PlayerByID> *playerNode = m_Players->findNode(&playerFinder);
     Node<Team> *teamtemp = m_Teams->findNode(&teamFinder);
-    Country* teamCountry = teamtemp->m_info->m_teamCountry;
-    Node<Team> *teamNode = teamCountry->m_countryTeams->findNode(&teamFinder);
-
-    if(playerNode == nullptr || teamNode == nullptr)
+    if(playerNode == nullptr || teamtemp == nullptr)
     {
         return StatusType::FAILURE;
     }
+    Country* teamCountry = teamtemp->m_info->m_teamCountry;
+    Node<Team> *teamNode = teamCountry->m_countryTeams->findNode(&teamFinder);
     if(playerNode->m_info->m_playerCountry != teamNode->m_info->m_teamCountry
     || playerNode->m_info->m_sport != teamNode->m_info->m_sport || playerNode->m_info->m_teamCount >= 3)
     {
