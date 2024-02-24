@@ -1,12 +1,5 @@
-#include "Player.h"
-#include "Player.cpp"
-#include "Country.h"
-#include "Country.cpp"
 #include <iostream>
-#include "AVLTree.h"
 #include "Olympicsa1.h"
-#include "Olympicsa1.cpp"
-#include "Team.cpp"
 int main(){
     Olympics olympus;
     
