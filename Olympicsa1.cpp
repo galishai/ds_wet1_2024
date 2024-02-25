@@ -220,6 +220,7 @@ StatusType Olympics::add_contestant_to_team(int teamId,int contestantId){ //TODO
         return StatusType::FAILURE;
     }
     PlayerByID *playerIDInThird = new PlayerByID(playerNode->m_info->m_ID, playerNode->m_info->m_strength, playerNode->m_info->m_sport, playerNode->m_info->m_playerCountry);
+    playerIDInThird->m_playerInIDGen = playerNode->m_info;
     PlayerByStrength *playerSTRInThird = new PlayerByStrength(playerNode->m_info->m_ID, playerNode->m_info->m_strength, playerNode->m_info->m_sport, playerNode->m_info->m_playerCountry);
     //PlayerByStrength *playerSTRGen = new PlayerByStrength(playerNode->m_info->m_ID, playerNode->m_info->m_strength, playerNode->m_info->m_sport, playerNode->m_info->m_playerCountry);
     try
@@ -749,6 +750,8 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
         //TODO check if ptrs were updated
         arrayPtrUpdate11[i]->m_StrengthVersionThird->m_playerInIDThird = arrayPtrUpdate11[i];
         arrayPtrUpdate11[i]->m_StrengthVersionTeamGen->m_playerInIDThird = arrayPtrUpdate11[i];
+        uniteTeamPointers(arrayPtrUpdate11[i], team1InCountry->m_info, team2InCountry->m_info);
+
     }
     PlayerByID **arrayPtrUpdate12;
     try
@@ -763,6 +766,7 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     {
         arrayPtrUpdate12[i]->m_StrengthVersionThird->m_playerInIDThird = arrayPtrUpdate12[i];
         arrayPtrUpdate12[i]->m_StrengthVersionTeamGen->m_playerInIDThird = arrayPtrUpdate12[i];
+        uniteTeamPointers(arrayPtrUpdate12[i], team1InCountry->m_info, team2InCountry->m_info);
     }
     PlayerByID **arrayPtrUpdate13;
     try
@@ -777,6 +781,7 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     {
         arrayPtrUpdate13[i]->m_StrengthVersionThird->m_playerInIDThird = arrayPtrUpdate13[i];
         arrayPtrUpdate13[i]->m_StrengthVersionTeamGen->m_playerInIDThird = arrayPtrUpdate13[i];
+        uniteTeamPointers(arrayPtrUpdate13[i], team1InCountry->m_info, team2InCountry->m_info);
     }
     //delete team1InCountry->m_info->m_firstThirdID;
     //delete team1InCountry->m_info->m_secondThirdID;
