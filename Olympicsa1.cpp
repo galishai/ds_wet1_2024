@@ -980,8 +980,8 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
 
 
     //in the end
-    m_Teams->removeNode(&checkIfExists2);
     team2->m_info->m_teamCountry->m_countryTeams->removeNode(&checkIfExists2);
+    m_Teams->removeNode(&checkIfExists2);
 
     updateMinMax(team1InCountry->m_info);
     //1. unite teams in Gen ID Tree
