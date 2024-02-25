@@ -845,6 +845,22 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
         trueMergedTeamSTR[i] = arrayMergedSTRGen[i];
     }
 
+    PlayerByStrength **trueMergedTeamSTRCopy;
+    try
+    {
+        trueMergedTeamSTRCopy = new PlayerByStrength *[true_length];
+    } catch (std::bad_alloc &)
+    {
+        throw;
+    }
+
+    for(int i = 0; i < true_length; i++)
+    {
+        PlayerByStrength *playerCopy = new PlayerByStrength(trueMergedTeamSTR[i]);
+        trueMergedTeamSTRCopy[i] = playerCopy;
+    }
+
+
     PlayerByStrength **arraySTR1New;
     try
     {
@@ -874,19 +890,19 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     int k = 0;
     for(int l = 0; l < true_length; l++)
     {
-        if(trueMergedTeamSTR[l]->m_playerInIDThird->m_currentThird == 1)
+        if(trueMergedTeamSTRCopy[l]->m_playerInIDThird->m_currentThird == 1)
         {
-            arraySTR1New[i] = trueMergedTeamSTR[l];
+            arraySTR1New[i] = trueMergedTeamSTRCopy[l];
             i++;
         }
-        else if(trueMergedTeamSTR[l]->m_playerInIDThird->m_currentThird == 2)
+        else if(trueMergedTeamSTRCopy[l]->m_playerInIDThird->m_currentThird == 2)
         {
-            arraySTR2New[j] = trueMergedTeamSTR[l];
+            arraySTR2New[j] = trueMergedTeamSTRCopy[l];
             j++;
         }
         else
         {
-            arraySTR3New[k] = trueMergedTeamSTR[l];
+            arraySTR3New[k] = trueMergedTeamSTRCopy[l];
             k++;
         }
     }
