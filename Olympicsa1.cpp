@@ -117,12 +117,14 @@ StatusType Olympics::remove_team(int teamId){
         Node<Team> *toBeRemovedGen = m_Teams->findNode(checkIfExists);
         if (toBeRemovedGen == nullptr)
         {
+            delete checkIfExists;
             return StatusType::FAILURE;
         }
         Country *teamCountry = toBeRemovedGen->m_info->m_teamCountry;
         Team* teamInCountry = teamCountry->m_countryTeams->findNode(checkIfExists)->m_info;
         if(!teamInCountry->m_firstThirdID->isEmpty())
         {
+            delete checkIfExists;
             return StatusType::FAILURE;
         }
         teamInCountry->m_teamCountry->m_countryTeams->removeNode(checkIfExists);
@@ -783,9 +785,9 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
         arrayPtrUpdate13[i]->m_StrengthVersionTeamGen->m_playerInIDThird = arrayPtrUpdate13[i];
         uniteTeamPointers(arrayPtrUpdate13[i], team1InCountry->m_info, team2InCountry->m_info);
     }
-    //delete team1InCountry->m_info->m_firstThirdID;
-    //delete team1InCountry->m_info->m_secondThirdID;
-    //delete team1InCountry->m_info->m_lastThirdID;
+    delete team1InCountry->m_info->m_firstThirdID;
+    delete team1InCountry->m_info->m_secondThirdID;
+    delete team1InCountry->m_info->m_lastThirdID;
     team1InCountry->m_info->m_firstThirdID->m_root = new_rootID1;
     team1InCountry->m_info->m_firstThirdID->m_treeSize = sizeOfFirstThird;
     team1InCountry->m_info->m_secondThirdID->m_root = new_rootID2;
@@ -968,9 +970,9 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
         arrayToUpdate23[i]->m_playerInIDThird->m_StrengthVersionThird = arrayToUpdate23[i];
     }
 
-    //delete team1InCountry->m_info->m_firstThirdSTR;
-    //delete team1InCountry->m_info->m_secondThirdSTR;
-    //delete team1InCountry->m_info->m_lastThirdSTR;
+    delete team1InCountry->m_info->m_firstThirdSTR;
+    delete team1InCountry->m_info->m_secondThirdSTR;
+    delete team1InCountry->m_info->m_lastThirdSTR;
     team1InCountry->m_info->m_firstThirdSTR->m_root = new_rootSTR1;
     team1InCountry->m_info->m_firstThirdSTR->m_treeSize = sizeOfFirstThird;
     team1InCountry->m_info->m_secondThirdSTR->m_root = new_rootSTR2;
