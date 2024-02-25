@@ -975,7 +975,7 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
         arrayToUpdateGen[i]->m_playerInIDThird->m_StrengthVersionTeamGen = arrayToUpdateGen[i];
     }
 
-    delete team1InCountry->m_info->m_playersBySTR;
+    //delete team1InCountry->m_info->m_playersBySTR;
     team1InCountry->m_info->m_playersBySTR->m_root = new_rootSTRGen;
     team1InCountry->m_info->m_playersBySTR->m_treeSize = sizeOfFirstThird + sizeOfSecondThird + sizeOfLastThird;
 
