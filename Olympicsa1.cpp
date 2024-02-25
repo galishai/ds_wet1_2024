@@ -1036,6 +1036,9 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     delete[] arrayMerged1123;
     delete[] arrayMerged212;
     delete[] arrayMerged2123;
+    delete[] arrayID21;
+    delete[] arrayID22;
+    delete[] arrayID23;
 	return StatusType::SUCCESS;
 }
 
