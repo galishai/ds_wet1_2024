@@ -183,7 +183,7 @@ remove_contestant_from_team: SUCCESS
 remove_contestant: FAILURE
 remove_contestant_from_team: SUCCESS
 remove_contestant_from_team: FAILURE
-remove_contestant: FAILURE
+remove_contestant: SUCCESS
 austerity_measures: SUCCESS, 0
 get_team_strength: SUCCESS, 0
 remove_contestant_from_team: SUCCESS
