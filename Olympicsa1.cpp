@@ -178,7 +178,7 @@ StatusType Olympics::remove_contestant(int contestantId){
     {
         return StatusType::FAILURE;
     }
-    if(playerNode->m_info->m_teamCount > 0)
+    if(playerNode->m_info->m_team1 != nullptr || playerNode->m_info->m_team2 != nullptr || playerNode->m_info->m_team3 != nullptr)
     {
         return StatusType::FAILURE;
     }
