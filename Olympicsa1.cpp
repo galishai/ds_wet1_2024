@@ -1025,6 +1025,10 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
 
     ///////updateMinMax
     ////////////return StatusType::ALLOCATION_ERROR;
+    for(i = 0; i < sizeOfArray11 + sizeOfArray12; i++)
+    {
+        delete arrayMerged112[i];
+    }
     delete[] arrayID11;
     delete[] arrayID12;
     delete[] arrayID13;
