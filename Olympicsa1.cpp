@@ -1029,6 +1029,18 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     {
         delete arrayMerged112[i];
     }
+    for(i = 0; i < sizeOfArray11 + sizeOfArray12 + sizeOfArray13; i++)
+    {
+        delete arrayMerged1123[i];
+    }
+    for(i = 0; i < sizeOfArray21 + sizeOfArray22; i++)
+    {
+        delete arrayMerged212[i];
+    }
+    for(i = 0; i < sizeOfArray21 + sizeOfArray22 + sizeOfArray23; i++)
+    {
+        delete arrayMerged2123[i];
+    }
     delete[] arrayID11;
     delete[] arrayID12;
     delete[] arrayID13;
