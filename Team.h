@@ -1141,7 +1141,7 @@ static void updateMinMax(Team *team)
     }
 }
 
-void uniteTeamPointers(PlayerByID* playerInIDThird, Team* team1, Team* team2)
+static void uniteTeamPointers(PlayerByID* playerInIDThird, Team* team1, Team* team2)
 {
     if(playerInIDThird->m_playerInIDGen->m_team1 == team2 && playerInIDThird->m_playerInIDGen->m_team2 != team1 && playerInIDThird->m_playerInIDGen->m_team3 != team1)
     {
