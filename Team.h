@@ -393,6 +393,7 @@ static void removePlayer(Team *team, PlayerByStrength *playerSTRGen) //input: pl
             PlayerByStrength* min2CopySTR = new PlayerByStrength(min2->m_info->m_ID, min2->m_info->m_strength, min2->m_info->m_sport, min2->m_info->m_playerCountry);
             min2Copy->m_StrengthVersionTeamGen = min2->m_info->m_StrengthVersionTeamGen;
             min2Copy->m_StrengthVersionThird = min2CopySTR;
+            min2Copy->m_playerInIDGen = min2->m_info->m_playerInIDGen;
             min2CopySTR->m_playerInIDThird = min2Copy;
             min2->m_info->m_StrengthVersionTeamGen->m_playerInIDThird = min2Copy;
             team->m_secondThirdID->removeNode(min2->m_info);
@@ -407,6 +408,7 @@ static void removePlayer(Team *team, PlayerByStrength *playerSTRGen) //input: pl
                 PlayerByStrength* min3CopySTR = new PlayerByStrength(min3->m_info->m_ID, min3->m_info->m_strength, min3->m_info->m_sport, min3->m_info->m_playerCountry);
                 min3Copy->m_StrengthVersionTeamGen = min3->m_info->m_StrengthVersionTeamGen;
                 min3Copy->m_StrengthVersionThird = min3CopySTR;
+                min3Copy->m_playerInIDGen = min3->m_info->m_playerInIDGen;
                 min3CopySTR->m_playerInIDThird = min3Copy;
                 min3->m_info->m_StrengthVersionTeamGen->m_playerInIDThird = min3Copy;
                 team->m_lastThirdID->removeNode(min3->m_info);
@@ -435,6 +437,7 @@ static void removePlayer(Team *team, PlayerByStrength *playerSTRGen) //input: pl
             PlayerByStrength* max1CopySTR = new PlayerByStrength(max1->m_info->m_ID, max1->m_info->m_strength, max1->m_info->m_sport, max1->m_info->m_playerCountry);
             max1Copy->m_StrengthVersionTeamGen = max1->m_info->m_StrengthVersionTeamGen;
             max1Copy->m_StrengthVersionThird = max1CopySTR;
+            max1Copy->m_playerInIDGen = max1->m_info->m_playerInIDGen;
             max1CopySTR->m_playerInIDThird = max1Copy;
             max1->m_info->m_StrengthVersionTeamGen->m_playerInIDThird = max1Copy;
             team->m_firstThirdID->removeNode(max1->m_info);
@@ -453,6 +456,7 @@ static void removePlayer(Team *team, PlayerByStrength *playerSTRGen) //input: pl
             PlayerByStrength* min3CopySTR = new PlayerByStrength(min3->m_info->m_ID, min3->m_info->m_strength, min3->m_info->m_sport, min3->m_info->m_playerCountry);
             min3Copy->m_StrengthVersionTeamGen = min3->m_info->m_StrengthVersionTeamGen;
             min3Copy->m_StrengthVersionThird = min3CopySTR;
+            min3Copy->m_playerInIDGen = min3->m_info->m_playerInIDGen;
             min3CopySTR->m_playerInIDThird = min3Copy;
             min3->m_info->m_StrengthVersionTeamGen->m_playerInIDThird = min3Copy;
             team->m_lastThirdID->removeNode(min3->m_info);
@@ -474,6 +478,7 @@ static void removePlayer(Team *team, PlayerByStrength *playerSTRGen) //input: pl
             PlayerByStrength* max2CopySTR = new PlayerByStrength(max2->m_info->m_ID, max2->m_info->m_strength, max2->m_info->m_sport, max2->m_info->m_playerCountry);
             max2Copy->m_StrengthVersionTeamGen = max2->m_info->m_StrengthVersionTeamGen;
             max2Copy->m_StrengthVersionThird = max2CopySTR;
+            max2Copy->m_playerInIDGen = max2->m_info->m_playerInIDGen;
             max2CopySTR->m_playerInIDThird = max2Copy;
             max2->m_info->m_StrengthVersionTeamGen->m_playerInIDThird = max2Copy;
             team->m_secondThirdID->removeNode(max2->m_info);
@@ -492,6 +497,7 @@ static void removePlayer(Team *team, PlayerByStrength *playerSTRGen) //input: pl
             PlayerByStrength* max2CopySTR = new PlayerByStrength(max2->m_info->m_ID, max2->m_info->m_strength, max2->m_info->m_sport, max2->m_info->m_playerCountry);
             max2Copy->m_StrengthVersionTeamGen = max2->m_info->m_StrengthVersionTeamGen;
             max2Copy->m_StrengthVersionThird = max2CopySTR;
+            max2Copy->m_playerInIDGen = max2->m_info->m_playerInIDGen;
             max2CopySTR->m_playerInIDThird = max2Copy;
             max2->m_info->m_StrengthVersionTeamGen->m_playerInIDThird = max2Copy;
             team->m_secondThirdID->removeNode(max2->m_info);
@@ -504,6 +510,7 @@ static void removePlayer(Team *team, PlayerByStrength *playerSTRGen) //input: pl
             PlayerByStrength* max1CopySTR = new PlayerByStrength(max1->m_info->m_ID, max1->m_info->m_strength, max1->m_info->m_sport, max1->m_info->m_playerCountry);
             max1Copy->m_StrengthVersionTeamGen = max1->m_info->m_StrengthVersionTeamGen;
             max1Copy->m_StrengthVersionThird = max1CopySTR;
+            max1Copy->m_playerInIDGen = max1->m_info->m_playerInIDGen;
             max1CopySTR->m_playerInIDThird = max1Copy;
             max1->m_info->m_StrengthVersionTeamGen->m_playerInIDThird = max1Copy;
             team->m_firstThirdID->removeNode(max1->m_info);
@@ -1153,11 +1160,11 @@ static void uniteTeamPointers(PlayerByID* playerInIDThird, Team* team1, Team* te
     }
     else if(playerInIDThird->m_playerInIDGen->m_team3 == team2 && playerInIDThird->m_playerInIDGen->m_team1 != team1 && playerInIDThird->m_playerInIDGen->m_team2 != team1)
     {
-        playerInIDThird->m_playerInIDGen->m_team1;
+        playerInIDThird->m_playerInIDGen->m_team3 = team1;
     }
     else if(playerInIDThird->m_playerInIDGen->m_team1 == team2)
     {
-        playerInIDThird->m_playerInIDGen->m_team3 = nullptr;
+        playerInIDThird->m_playerInIDGen->m_team1 = nullptr;
     }
     else if(playerInIDThird->m_playerInIDGen->m_team2 == team2)
     {
