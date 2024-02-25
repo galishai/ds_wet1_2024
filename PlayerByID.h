@@ -14,12 +14,14 @@ class PlayerByID : public Player
 public:
     PlayerByStrength* m_StrengthVersionThird;
     PlayerByStrength* m_StrengthVersionTeamGen;
+    PlayerByID* m_playerInIDGen;
     int m_currentThird; //1-first, 2-second, 3-last
 
     PlayerByID(int ID, int strength, Sport sport, Country *country) : Player(ID,strength,sport,country)
     {
         m_StrengthVersionThird = nullptr;
         m_StrengthVersionTeamGen = nullptr;
+        m_playerInIDGen = nullptr;
         m_currentThird = -1;
     }
 
@@ -27,6 +29,7 @@ public:
     {
         m_StrengthVersionThird = other->m_StrengthVersionThird;
         m_StrengthVersionTeamGen = other->m_StrengthVersionTeamGen;
+        m_playerInIDGen = other->m_playerInIDGen;
         m_currentThird = other->m_currentThird;
     }
 
