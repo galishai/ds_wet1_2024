@@ -659,7 +659,7 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     {
         throw;
     }
-
+    //TODO check current third, nullify new arrays
     InorderTransversalIntoArray(team1InCountry->m_info->m_firstThirdID->m_root, arrayID11, sizeOfArray11, 0);
     InorderTransversalIntoArray(team1InCountry->m_info->m_secondThirdID->m_root, arrayID12, sizeOfArray12, 0);
     InorderTransversalIntoArray(team1InCountry->m_info->m_lastThirdID->m_root, arrayID13, sizeOfArray13, 0);
@@ -746,6 +746,7 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     InorderTransversalIntoArray(new_rootID1, arrayPtrUpdate11, sizeOfFirstThird, 0);
     for(int i = 0; i < sizeOfFirstThird; i++)
     {
+        //TODO check if ptrs were updated
         arrayPtrUpdate11[i]->m_StrengthVersionThird->m_playerInIDThird = arrayPtrUpdate11[i];
         arrayPtrUpdate11[i]->m_StrengthVersionTeamGen->m_playerInIDThird = arrayPtrUpdate11[i];
     }
@@ -956,7 +957,7 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     team1InCountry->m_info->m_lastThirdSTR->m_root = new_rootSTR3;
     team1InCountry->m_info->m_lastThirdSTR->m_treeSize = sizeOfLastThird;
 
-    Node<PlayerByStrength> *new_rootSTRGen = mergedArrayIntoBalTree(trueMergedTeamSTR, 0, true_length);
+    Node<PlayerByStrength> *new_rootSTRGen = mergedArrayIntoBalTree(trueMergedTeamSTR, 0, true_length - 1);
 
     PlayerByStrength **arrayToUpdateGen;
     try
