@@ -785,9 +785,13 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
         arrayPtrUpdate13[i]->m_StrengthVersionTeamGen->m_playerInIDThird = arrayPtrUpdate13[i];
         uniteTeamPointers(arrayPtrUpdate13[i], team1InCountry->m_info, team2InCountry->m_info);
     }
-    //delete team1InCountry->m_info->m_firstThirdID;
-    //delete team1InCountry->m_info->m_secondThirdID;
-    //delete team1InCountry->m_info->m_lastThirdID;
+    delete team1InCountry->m_info->m_firstThirdID;
+    delete team1InCountry->m_info->m_secondThirdID;
+    delete team1InCountry->m_info->m_lastThirdID;
+    //TODO
+    team1InCountry->m_info->m_firstThirdID = new AVLTree<PlayerByID>();
+    team1InCountry->m_info->m_secondThirdID = new AVLTree<PlayerByID>();
+    team1InCountry->m_info->m_lastThirdID = new AVLTree<PlayerByID>();
     team1InCountry->m_info->m_firstThirdID->m_root = new_rootID1;
     team1InCountry->m_info->m_firstThirdID->m_treeSize = sizeOfFirstThird;
     team1InCountry->m_info->m_secondThirdID->m_root = new_rootID2;
@@ -970,9 +974,12 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
         arrayToUpdate23[i]->m_playerInIDThird->m_StrengthVersionThird = arrayToUpdate23[i];
     }
 
-    //delete team1InCountry->m_info->m_firstThirdSTR;
-    //delete team1InCountry->m_info->m_secondThirdSTR;
-    //delete team1InCountry->m_info->m_lastThirdSTR;
+    delete team1InCountry->m_info->m_firstThirdSTR;
+    delete team1InCountry->m_info->m_secondThirdSTR;
+    delete team1InCountry->m_info->m_lastThirdSTR;
+    team1InCountry->m_info->m_firstThirdSTR = new AVLTree<PlayerByStrength>();
+    team1InCountry->m_info->m_secondThirdSTR = new AVLTree<PlayerByStrength>();
+    team1InCountry->m_info->m_lastThirdSTR = new AVLTree<PlayerByStrength>();
     team1InCountry->m_info->m_firstThirdSTR->m_root = new_rootSTR1;
     team1InCountry->m_info->m_firstThirdSTR->m_treeSize = sizeOfFirstThird;
     team1InCountry->m_info->m_secondThirdSTR->m_root = new_rootSTR2;
