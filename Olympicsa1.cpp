@@ -758,8 +758,10 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
         throw;
     }
     InorderTransversalIntoArray(new_rootID2, arrayPtrUpdate12, sizeOfSecondThird, 0);
-    for(int i = 0; i < sizeOfFirstThird; i++)
+    for(int i = 0; i < sizeOfSecondThird; i++)
     {
+        assert(arrayPtrUpdate12[i] != nullptr);
+        assert(arrayPtrUpdate12[i]->m_StrengthVersionThird != nullptr);
         arrayPtrUpdate12[i]->m_StrengthVersionThird->m_playerInIDThird = arrayPtrUpdate12[i];
         arrayPtrUpdate12[i]->m_StrengthVersionTeamGen->m_playerInIDThird = arrayPtrUpdate12[i];
     }
@@ -772,7 +774,7 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
         throw;
     }
     InorderTransversalIntoArray(new_rootID3, arrayPtrUpdate13, sizeOfFirstThird, 0);
-    for(int i = 0; i < sizeOfFirstThird; i++)
+    for(int i = 0; i < sizeOfLastThird; i++)
     {
         arrayPtrUpdate13[i]->m_StrengthVersionThird->m_playerInIDThird = arrayPtrUpdate13[i];
         arrayPtrUpdate13[i]->m_StrengthVersionTeamGen->m_playerInIDThird = arrayPtrUpdate13[i];
