@@ -679,8 +679,8 @@ StatusType Olympics::unite_teams(int teamId1,int teamId2){
     try
     {
         arrayMergedTeam12 = new PlayerByID *[sizeOfArray11 + sizeOfArray12 + sizeOfArray13 + sizeOfArray21 + sizeOfArray22 + sizeOfArray23 + 1];
-        arrayMergedTeam12 = {nullptr};
-        for (int i = 0; i < sizeOfArray11 + sizeOfArray12 + sizeOfArray13 + sizeOfArray21 + sizeOfArray22 + sizeOfArray23; i++)
+        //arrayMergedTeam12 = {nullptr};
+        for (int i = 0; i < sizeOfArray11 + sizeOfArray12 + sizeOfArray13 + sizeOfArray21 + sizeOfArray22 + sizeOfArray23 + 1; i++)
         {
             arrayMergedTeam12[i] = nullptr;
         }
