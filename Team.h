@@ -258,7 +258,7 @@ static void addPlayer(Team* team, PlayerByID *playerID, PlayerByStrength *player
             team->m_firstThirdID->insertNode(playerID);
             team->m_firstThirdSTR->insertNode(playerSTR);
             playerID->m_currentThird = 1;
-            if (team->m_firstThirdID->m_treeSize - team->m_secondThirdID->m_treeSize == 2)
+            if (team->m_firstThirdID->m_treeSize - team->m_secondThirdID->m_treeSize == 2 && team->m_secondThirdID->m_treeSize == team->m_lastThirdID->m_treeSize)
             {
                 Node<PlayerByID> *max = team->m_firstThirdID->maxNode(team->m_firstThirdID->m_root);
                 PlayerByID *movePlayerID = new PlayerByID(max->m_info->m_ID, max->m_info->m_strength,
@@ -277,6 +277,42 @@ static void addPlayer(Team* team, PlayerByID *playerID, PlayerByStrength *player
                 movePlayerID->m_StrengthVersionThird = movePlayerSTR;
                 movePlayerSTR->m_playerInIDThird = movePlayerID;
                 movePlayerID->m_currentThird = 2;
+            }
+            else if(team->m_firstThirdID->m_treeSize > team->m_secondThirdID->m_treeSize && team->m_secondThirdID->m_treeSize > team->m_lastThirdID->m_treeSize)
+            {
+                Node<PlayerByID> *max = team->m_firstThirdID->maxNode(team->m_firstThirdID->m_root);
+                PlayerByID *movePlayerID = new PlayerByID(max->m_info->m_ID, max->m_info->m_strength,
+                                                          max->m_info->m_sport, max->m_info->m_playerCountry);
+                max->m_info->m_StrengthVersionTeamGen->m_playerInIDThird=movePlayerID;
+                movePlayerID->m_StrengthVersionTeamGen = max->m_info->m_StrengthVersionTeamGen;
+                movePlayerID->m_StrengthVersionThird = max->m_info->m_StrengthVersionThird;
+                movePlayerID->m_playerInIDGen = max->m_info->m_playerInIDGen;
+                PlayerByStrength *targetSTR = max->m_info->m_StrengthVersionThird;
+                PlayerByStrength *movePlayerSTR = new PlayerByStrength(targetSTR->m_ID, targetSTR->m_strength,
+                                                                       targetSTR->m_sport, targetSTR->m_playerCountry);
+                team->m_firstThirdID->removeNode(max->m_info);
+                team->m_firstThirdSTR->removeNode(movePlayerID->m_StrengthVersionThird);
+                team->m_secondThirdID->insertNode(movePlayerID);
+                team->m_secondThirdSTR->insertNode(movePlayerSTR);
+                movePlayerID->m_StrengthVersionThird = movePlayerSTR;
+                movePlayerSTR->m_playerInIDThird = movePlayerID;
+                movePlayerID->m_currentThird = 2;
+                Node<PlayerByID> *max1 = team->m_secondThirdID->maxNode(team->m_secondThirdID->m_root);
+                PlayerByStrength *targetSTR1 = max1->m_info->m_StrengthVersionThird;
+                PlayerByID *movePlayerID1 = new PlayerByID(max1->m_info->m_ID, max1->m_info->m_strength,
+                                                          max1->m_info->m_sport, max1->m_info->m_playerCountry);
+                max1->m_info->m_StrengthVersionTeamGen->m_playerInIDThird = movePlayerID1;
+                PlayerByStrength *movePlayerSTR1 = new PlayerByStrength(targetSTR1->m_ID, targetSTR1->m_strength,
+                                                                       targetSTR1->m_sport, targetSTR1->m_playerCountry);
+                movePlayerID1->m_StrengthVersionTeamGen = max1->m_info->m_StrengthVersionTeamGen;
+                movePlayerID1->m_StrengthVersionThird = movePlayerSTR1;
+                movePlayerID1->m_playerInIDGen = max1->m_info->m_playerInIDGen;
+                movePlayerSTR1->m_playerInIDThird = movePlayerID1;
+                team->m_secondThirdID->removeNode(max1->m_info);
+                team->m_secondThirdSTR->removeNode(targetSTR1);
+                team->m_lastThirdID->insertNode(movePlayerID1);
+                team->m_lastThirdSTR->insertNode(movePlayerSTR1);
+                movePlayerID1->m_currentThird = 3;
             }
         } else if (*playerID < team->m_secondThirdID->maxNode(team->m_secondThirdID->m_root)->m_info)
         {

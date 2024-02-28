@@ -212,7 +212,11 @@ StatusType Olympics::add_contestant_to_team(int teamId,int contestantId){ //TODO
     Country* teamCountry = teamtemp->m_info->m_teamCountry;
     Node<Team> *teamNode = teamCountry->m_countryTeams->findNode(&teamFinder);
     if(playerNode->m_info->m_playerCountry != teamNode->m_info->m_teamCountry
-    || playerNode->m_info->m_sport != teamNode->m_info->m_sport || playerNode->m_info->m_teamCount >= 3)
+    || playerNode->m_info->m_sport != teamNode->m_info->m_sport)
+    {
+        return StatusType::FAILURE;
+    }
+    if(playerNode->m_info->m_team1 != nullptr && playerNode->m_info->m_team2 != nullptr && playerNode->m_info->m_team3 != nullptr)
     {
         return StatusType::FAILURE;
     }
@@ -392,7 +396,7 @@ StatusType Olympics::update_contestant_strength(int contestantId ,int change){ /
                 p->m_info->m_StrengthVersionTeamGen = updatedSTRGen2;
                 updatedSTRGen2->m_playerInIDThird = p->m_info;
             }
-            p = player->m_team1->m_secondThirdID->findNode(player);
+            p = player->m_team2->m_secondThirdID->findNode(player);
             if (p != nullptr)
             {
                 player->m_team2->m_secondThirdSTR->removeNode(&p2);
@@ -449,7 +453,7 @@ StatusType Olympics::update_contestant_strength(int contestantId ,int change){ /
                 p->m_info->m_StrengthVersionTeamGen = updatedSTRGen3;
                 updatedSTRGen3->m_playerInIDThird = p->m_info;
             }
-            p = player->m_team1->m_lastThirdID->findNode(player);
+            p = player->m_team3->m_lastThirdID->findNode(player);
             if (p != nullptr)
             {
                 player->m_team3->m_lastThirdSTR->removeNode(&p3);
@@ -1196,7 +1200,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
      {
          //2,1,0
          max1 = teamInCountry->m_secondThirdMax1STR->m_strength;
-         max2 = teamInCountry->m_lastThird1stMinID->m_strength;
+         max2 = teamInCountry->m_lastThird1stMinID->m_StrengthVersionThird->m_strength;
          if(teamInCountry->m_lastThirdMax1STR->m_ID == teamInCountry->m_lastThird1stMinID->m_ID)
          {
              max3 = teamInCountry->m_lastThirdMax2STR->m_strength;
@@ -1253,7 +1257,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
          {
              m11 = teamInCountry->m_firstThirdMax1STR->m_strength;
          }
-         max1 = maxg(m11, teamInCountry->m_secondThird1stMinID->m_strength, teamInCountry->m_secondThird2ndMinID->m_strength);
+         max1 = maxg(m11, teamInCountry->m_secondThird1stMinID->m_StrengthVersionThird->m_strength, teamInCountry->m_secondThird2ndMinID->m_StrengthVersionThird->m_strength);
          if(teamInCountry->m_secondThirdMax1STR->m_ID != teamInCountry->m_secondThird1stMinID->m_ID && teamInCountry->m_secondThirdMax1STR->m_ID != teamInCountry->m_secondThird2ndMinID->m_ID)
          {
              m22 = teamInCountry->m_secondThirdMax1STR->m_strength;
@@ -1266,7 +1270,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
          {
              m22 = teamInCountry->m_secondThirdMax3STR->m_strength;
          }
-         max2 = maxg(m22, teamInCountry->m_lastThird1stMinID->m_strength);
+         max2 = maxg(m22, teamInCountry->m_lastThird1stMinID->m_StrengthVersionThird->m_strength);
          if(teamInCountry->m_lastThirdMax1STR->m_ID == teamInCountry->m_lastThird1stMinID->m_ID)
          {
              max3 = teamInCountry->m_lastThirdMax2STR->m_strength;
@@ -1294,8 +1298,8 @@ output_t<int> Olympics::austerity_measures(int teamId){
          {
              m22 = teamInCountry->m_secondThirdMax1STR->m_strength;
          }
-         max2 = maxg(teamInCountry->m_firstThirdMax1ID->m_strength, m22, teamInCountry->m_lastThird1stMinID->m_strength);
-         if(teamInCountry->m_lastThird1stMinID->m_strength == teamInCountry->m_lastThirdMax1STR->m_strength)
+         max2 = maxg(teamInCountry->m_firstThirdMax1ID->m_StrengthVersionThird->m_strength, m22, teamInCountry->m_lastThird1stMinID->m_StrengthVersionThird->m_strength);
+         if(teamInCountry->m_lastThird1stMinID->m_StrengthVersionThird->m_strength == teamInCountry->m_lastThirdMax1STR->m_strength)
          {
              max3 = teamInCountry->m_lastThirdMax2STR->m_strength;
          }
@@ -1316,12 +1320,12 @@ output_t<int> Olympics::austerity_measures(int teamId){
          {
              m33 = teamInCountry->m_lastThirdMax1STR->m_strength;
          }
-         max3 = maxg(m33, teamInCountry->m_secondThirdMax1ID->m_strength, teamInCountry->m_secondThirdMax2ID->m_strength);
-         if(teamInCountry->m_secondThirdMax1STR->m_strength != teamInCountry->m_secondThirdMax1ID->m_strength && teamInCountry->m_secondThirdMax1STR->m_strength != teamInCountry->m_secondThirdMax2ID->m_strength)
+         max3 = maxg(m33, teamInCountry->m_secondThirdMax1ID->m_StrengthVersionThird->m_strength, teamInCountry->m_secondThirdMax2ID->m_StrengthVersionThird->m_strength);
+         if(teamInCountry->m_secondThirdMax1STR->m_strength != teamInCountry->m_secondThirdMax1ID->m_StrengthVersionThird->m_strength && teamInCountry->m_secondThirdMax1STR->m_strength != teamInCountry->m_secondThirdMax2ID->m_StrengthVersionThird->m_strength)
          {
              m22 = teamInCountry->m_secondThirdMax1STR->m_strength;
          }
-         else if(teamInCountry->m_secondThirdMax2STR->m_strength != teamInCountry->m_secondThirdMax1ID->m_strength && teamInCountry->m_secondThirdMax2STR->m_strength != teamInCountry->m_secondThirdMax2ID->m_strength)
+         else if(teamInCountry->m_secondThirdMax2STR->m_strength != teamInCountry->m_secondThirdMax1ID->m_StrengthVersionThird->m_strength && teamInCountry->m_secondThirdMax2STR->m_strength != teamInCountry->m_secondThirdMax2ID->m_StrengthVersionThird->m_strength)
          {
              m22 = teamInCountry->m_secondThirdMax2STR->m_strength;
          }
@@ -1329,7 +1333,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
          {
              m22 = teamInCountry->m_secondThirdMax3STR->m_strength;
          }
-         max2 = maxg(m22, teamInCountry->m_firstThirdMax1ID->m_strength);
+         max2 = maxg(m22, teamInCountry->m_firstThirdMax1ID->m_StrengthVersionThird->m_strength);
          s3 = max1 + max2 + max3;
 
          //2,1,0
@@ -1346,17 +1350,17 @@ output_t<int> Olympics::austerity_measures(int teamId){
          int m12;
          if(teamInCountry->m_secondThirdMin1STR->m_ID == teamInCountry->m_secondThird1stMinID->m_ID)
          {
-             m12 = teamInCountry->m_secondThird2ndMinID->m_strength;
+             m12 = teamInCountry->m_secondThird2ndMinID->m_StrengthVersionThird->m_strength;
          }
          else
          {
-             m12 = teamInCountry->m_secondThird1stMinID->m_strength;
+             m12 = teamInCountry->m_secondThird1stMinID->m_StrengthVersionThird->m_strength;
          }
          max1 = maxg(m11, m12);
-         int m23 = teamInCountry->m_lastThird1stMinID->m_strength;
+         int m23 = teamInCountry->m_lastThird1stMinID->m_StrengthVersionThird->m_strength;
          if(teamInCountry->m_secondThirdMin1STR->m_ID == teamInCountry->m_secondThird1stMinID->m_ID)
          {
-             if(teamInCountry->m_secondThirdMax1STR-> m_strength == teamInCountry->m_secondThird2ndMinID->m_strength)
+             if(teamInCountry->m_secondThirdMax1STR->m_strength == teamInCountry->m_secondThird2ndMinID->m_StrengthVersionThird->m_strength)
              {
                  m22 = teamInCountry->m_secondThirdMax2STR->m_strength;
              }
@@ -1367,7 +1371,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
          }
          else
          {
-             if(teamInCountry->m_secondThirdMax1STR->m_strength == teamInCountry->m_secondThird1stMinID->m_strength)
+             if(teamInCountry->m_secondThirdMax1STR->m_strength == teamInCountry->m_secondThird1stMinID->m_StrengthVersionThird->m_strength)
              {
                  m22 = teamInCountry->m_secondThirdMax2STR->m_strength;
              }
@@ -1381,7 +1385,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
 
          //2,0,1
 
-         max1 = maxg(teamInCountry->m_firstThirdMax1STR->m_strength, teamInCountry->m_secondThird1stMinID->m_strength);
+         max1 = maxg(teamInCountry->m_firstThirdMax1STR->m_strength, teamInCountry->m_secondThird1stMinID->m_StrengthVersionThird->m_strength);
          if(teamInCountry->m_secondThirdMax1STR->m_ID == teamInCountry->m_secondThird1stMinID->m_ID)
          {
              max2 = teamInCountry->m_secondThirdMax2STR->m_strength;
@@ -1396,7 +1400,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
          //1,2,0
 
          max1 = teamInCountry->m_firstThirdMax1STR->m_strength;
-         max2 = maxg(teamInCountry->m_secondThirdMax1STR->m_strength, teamInCountry->m_lastThird1stMinID->m_strength);
+         max2 = maxg(teamInCountry->m_secondThirdMax1STR->m_strength, teamInCountry->m_lastThird1stMinID->m_StrengthVersionThird->m_strength);
          if(teamInCountry->m_lastThirdMax1STR->m_ID == teamInCountry->m_lastThird1stMinID->m_ID)
          {
              max3 = teamInCountry->m_lastThirdMax2STR->m_strength;
@@ -1417,7 +1421,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
          {
              max1 = teamInCountry->m_firstThirdMax1STR->m_strength;
          }
-         max2 = maxg(teamInCountry->m_firstThirdMax1ID->m_strength, teamInCountry->m_secondThirdMax1STR->m_strength);
+         max2 = maxg(teamInCountry->m_firstThirdMax1ID->m_StrengthVersionThird->m_strength, teamInCountry->m_secondThirdMax1STR->m_strength);
          max3 = teamInCountry->m_lastThirdMax1STR->m_strength;
          s7 = max1 + max2 + max3;
 
@@ -1432,7 +1436,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
          {
              max2 = teamInCountry->m_secondThirdMax1STR->m_strength;
          }
-         max3 = maxg(teamInCountry->m_secondThirdMax1ID->m_strength, teamInCountry->m_lastThirdMax1STR->m_strength);
+         max3 = maxg(teamInCountry->m_secondThirdMax1ID->m_StrengthVersionThird->m_strength, teamInCountry->m_lastThirdMax1STR->m_strength);
          s8 = max1 + max2 + max3;
 
          //0,1,2
@@ -1447,15 +1451,15 @@ output_t<int> Olympics::austerity_measures(int teamId){
          }
          if(teamInCountry->m_secondThirdMin1STR->m_ID == teamInCountry->m_secondThirdMax1ID->m_ID)
          {
-             max3 = maxg(teamInCountry->m_secondThirdMax2ID->m_strength, teamInCountry->m_lastThirdMax1STR->m_strength);
+             max3 = maxg(teamInCountry->m_secondThirdMax2ID->m_StrengthVersionThird->m_strength, teamInCountry->m_lastThirdMax1STR->m_strength);
          }
          else
          {
-             max3 = maxg(teamInCountry->m_secondThirdMax1ID->m_strength, teamInCountry->m_lastThirdMax1STR->m_strength);
+             max3 = maxg(teamInCountry->m_secondThirdMax1ID->m_StrengthVersionThird->m_strength, teamInCountry->m_lastThirdMax1STR->m_strength);
          }
          if(teamInCountry->m_secondThirdMin1STR->m_ID == teamInCountry->m_secondThirdMax1ID->m_ID)
          {
-             if(teamInCountry->m_secondThirdMax1STR->m_strength == teamInCountry->m_secondThirdMax2ID->m_strength)
+             if(teamInCountry->m_secondThirdMax1STR->m_strength == teamInCountry->m_secondThirdMax2ID->m_StrengthVersionThird->m_strength)
              {
                  m22 = teamInCountry->m_secondThirdMax2STR->m_strength;
              }
@@ -1463,11 +1467,11 @@ output_t<int> Olympics::austerity_measures(int teamId){
              {
                  m22 = teamInCountry->m_secondThirdMax1STR->m_strength;
              }
-             max2 = maxg(teamInCountry->m_firstThirdMax1ID->m_strength, m22);
+             max2 = maxg(teamInCountry->m_firstThirdMax1ID->m_StrengthVersionThird->m_strength, m22);
          }
          else
          {
-             if(teamInCountry->m_secondThirdMax1STR->m_strength == teamInCountry->m_secondThirdMax1ID->m_strength)
+             if(teamInCountry->m_secondThirdMax1STR->m_strength == teamInCountry->m_secondThirdMax1ID->m_StrengthVersionThird->m_strength)
              {
                  m22 = teamInCountry->m_secondThirdMax2STR->m_strength;
              }
@@ -1475,7 +1479,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
              {
                  m22 = teamInCountry->m_secondThirdMax1STR->m_strength;
              }
-             max2 = maxg(teamInCountry->m_firstThirdMax1ID->m_strength, m22);
+             max2 = maxg(teamInCountry->m_firstThirdMax1ID->m_StrengthVersionThird->m_strength, m22);
          }
          s9 = max1 + max2 + max3;
 
