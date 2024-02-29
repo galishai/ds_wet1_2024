@@ -1,5 +1,8 @@
+#include "Country.cpp"
 #include <iostream>
 #include "Olympicsa1.h"
+#include "Olympicsa1.cpp"
+#include "Team.cpp"
 int main(){
     Olympics olympus;
     
