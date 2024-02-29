@@ -1,0 +1,155 @@
+Checking play_match...
+Adding countries...
+0
+0
+Adding teams...
+0
+0
+0
+Adding contestants...
+0
+0
+0
+0
+0
+0
+Adding contestants to teams...
+0
+0
+0
+0
+0
+0
+How strong is Team Jamaica in Acrobatics?
+(0,15)
+How strong is Team Argentina in Acrobatics?
+(0,15)
+How many medals does Jamaica have?
+(0,0)
+How many medals does Argentina have?
+(0,0)
+Current game: Argentina vs Jamaica, in Acrobatics.
+0
+How many medals does Jamaica have?
+(0,0)
+How many medals does Argentina have?
+(0,0)
+Updating Jamaican player strength...
+0
+How strong is Team Jamaica in Acrobatics?
+(0,16)
+How strong is Team Argentina in Acrobatics?
+(0,15)
+Current game: Argentina vs Jamaica, in Acrobatics.
+0
+How many medals does Jamaica have?
+(0,1)
+How many medals does Argentina have?
+(0,0)
+Updating Argentinian player strength...
+0
+How strong is Team Jamaica in Acrobatics?
+(0,16)
+How strong is Team Argentina in Acrobatics?
+(0,16)
+Current game: Argentina vs Jamaica, in Acrobatics.
+0
+How many medals does Jamaica have?
+(0,2)
+How many medals does Argentina have?
+(0,0)
+Current game: StatusType::INVALID_INPUT == 2.
+2
+2
+2
+2
+2
+Current game: StatusType::FAILURE == 3.
+3
+3
+3
+3
+Checking unite_teams...
+Adding teams...
+0
+0
+0
+0
+0
+0
+0
+Adding contestants...
+0
+0
+0
+0
+0
+0
+0
+0
+0
+Adding contestants to teams...
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+How strong are the ten teams?
+(0,0)
+(0,0)
+(0,17)
+(0,0)
+(0,5)
+(0,0)
+(0,0)
+(0,0)
+(0,16)
+(0,16)
+Merging teams...
+0
+0
+0
+0
+How strong are the teams?
+(0,0)
+(0,17)
+(0,0)
+(0,0)
+(0,13)
+(0,16)
+Let us try to get the strength of deleted teams - (3,0)
+(3,0)
+(3,0)
+(3,0)
+(3,0)
+Merging teams...
+0
+0
+0
+How strong are the teams?
+(0,13)
+(0,17)
+(0,20)
+Merging teams, expecting StatusType::INVALID_INPUT == 2...
+2
+2
+2
+2
+2
+Merging teams, expecting StatusType::FAILURE == 3...
+3
+3
+3
+3
+Last game: Argentina vs Jamaica, in Acrobatics.
+0
+How many medals does Jamaica have?
+(0,3)
+How many medals does Argentina have?
+(0,0)
