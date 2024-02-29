@@ -1,155 +1,192 @@
-Checking play_match...
-Adding countries...
-0
-0
-Adding teams...
-0
-0
-0
-Adding contestants...
-0
-0
-0
-0
-0
-0
-Adding contestants to teams...
-0
-0
-0
-0
-0
-0
-How strong is Team Jamaica in Acrobatics?
-(0,15)
-How strong is Team Argentina in Acrobatics?
-(0,15)
-How many medals does Jamaica have?
-(0,0)
-How many medals does Argentina have?
-(0,0)
-Current game: Argentina vs Jamaica, in Acrobatics.
-0
-How many medals does Jamaica have?
-(0,0)
-How many medals does Argentina have?
-(0,0)
-Updating Jamaican player strength...
-0
-How strong is Team Jamaica in Acrobatics?
-(0,16)
-How strong is Team Argentina in Acrobatics?
-(0,15)
-Current game: Argentina vs Jamaica, in Acrobatics.
-0
-How many medals does Jamaica have?
-(0,1)
-How many medals does Argentina have?
-(0,0)
-Updating Argentinian player strength...
-0
-How strong is Team Jamaica in Acrobatics?
-(0,16)
-How strong is Team Argentina in Acrobatics?
-(0,16)
-Current game: Argentina vs Jamaica, in Acrobatics.
-0
-How many medals does Jamaica have?
-(0,2)
-How many medals does Argentina have?
-(0,0)
-Current game: StatusType::INVALID_INPUT == 2.
-2
-2
-2
-2
-2
-Current game: StatusType::FAILURE == 3.
-3
-3
-3
-3
-Checking unite_teams...
-Adding teams...
-0
-0
-0
-0
-0
-0
-0
-Adding contestants...
-0
-0
-0
-0
-0
-0
-0
-0
-0
-Adding contestants to teams...
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-How strong are the ten teams?
-(0,0)
-(0,0)
-(0,17)
-(0,0)
-(0,5)
-(0,0)
-(0,0)
-(0,0)
-(0,16)
-(0,16)
-Merging teams...
-0
-0
-0
-0
-How strong are the teams?
-(0,0)
-(0,17)
-(0,0)
-(0,0)
-(0,13)
-(0,16)
-Let us try to get the strength of deleted teams - (3,0)
-(3,0)
-(3,0)
-(3,0)
-(3,0)
-Merging teams...
-0
-0
-0
-How strong are the teams?
-(0,13)
-(0,17)
-(0,20)
-Merging teams, expecting StatusType::INVALID_INPUT == 2...
-2
-2
-2
-2
-2
-Merging teams, expecting StatusType::FAILURE == 3...
-3
-3
-3
-3
-Last game: Argentina vs Jamaica, in Acrobatics.
-0
-How many medals does Jamaica have?
-(0,3)
-How many medals does Argentina have?
-(0,0)
+add_country: INVALID_INPUT
+add_country: SUCCESS
+add_country: SUCCESS
+add_country: SUCCESS
+add_country: FAILURE
+add_country: INVALID_INPUT
+add_country: SUCCESS
+add_country: SUCCESS
+remove_country: SUCCESS
+remove_country: INVALID_INPUT
+add_country: SUCCESS
+add_team: SUCCESS
+add_team: FAILURE
+add_team: INVALID_INPUT
+add_team: INVALID_INPUT
+add_team: FAILURE
+add_team: SUCCESS
+add_team: SUCCESS
+add_team: SUCCESS
+add_team: SUCCESS
+remove_team: SUCCESS
+remove_team: FAILURE
+remove_team: INVALID_INPUT
+add_contestant: INVALID_INPUT
+add_contestant: INVALID_INPUT
+add_contestant: SUCCESS
+add_contestant: INVALID_INPUT
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+remove_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+remove_contestant: SUCCESS
+remove_contestant: INVALID_INPUT
+remove_contestant: FAILURE
+add_contestant_to_team: SUCCESS
+remove_contestant: FAILURE
+remove_team: FAILURE
+remove_contestant_from_team: SUCCESS
+remove_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+austerity_measures: SUCCESS, 0
+austerity_measures: FAILURE
+austerity_measures: FAILURE
+austerity_measures: FAILURE
+austerity_measures: INVALID_INPUT
+austerity_measures: FAILURE
+get_team_strength: INVALID_INPUT
+get_team_strength: FAILURE
+get_team_strength: SUCCESS, 700
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+remove_contestant_from_team: SUCCESS
+get_team_strength: SUCCESS, 0
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 700
+get_medals: INVALID_INPUT
+get_medals: FAILURE
+get_medals: SUCCESS, 0
+get_medals: SUCCESS, 0
+get_medals: SUCCESS, 2
+get_medals: SUCCESS, 4
+get_medals: SUCCESS, 4
+get_strength: SUCCESS, 100
+get_strength: SUCCESS, 100
+get_strength: SUCCESS, 100
+get_strength: SUCCESS, 500
+get_strength: SUCCESS, 200
+get_strength: SUCCESS, 100
+get_strength: FAILURE
+get_strength: INVALID_INPUT
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+add_team: SUCCESS
+add_team: SUCCESS
+add_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: FAILURE
+remove_contestant_from_team: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: FAILURE
+austerity_measures: FAILURE
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+austerity_measures: SUCCESS, 0
+update_contestant_strength: INVALID_INPUT
+add_contestant_to_team: SUCCESS
+austerity_measures: SUCCESS, 0
+austerity_measures: FAILURE
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+austerity_measures: SUCCESS, 1600
+get_team_strength: SUCCESS, 1400
+update_contestant_strength: SUCCESS
+austerity_measures: SUCCESS, 1500
+get_team_strength: SUCCESS, 1300
+update_contestant_strength: SUCCESS
+austerity_measures: SUCCESS, 1600
+get_team_strength: SUCCESS, 1400
+update_contestant_strength: INVALID_INPUT
+update_contestant_strength: FAILURE
+update_contestant_strength: FAILURE
+update_contestant_strength: SUCCESS
+play_match: INVALID_INPUT
+play_match: INVALID_INPUT
+play_match: INVALID_INPUT
+play_match: FAILURE
+play_match: FAILURE
+play_match: FAILURE
+play_match: FAILURE
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+get_medals: SUCCESS, 2
+get_medals: SUCCESS, 0
+play_match: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+get_medals: SUCCESS, 3
+get_medals: SUCCESS, 0
+remove_contestant_from_team: SUCCESS
+get_team_strength: SUCCESS, 900
+get_team_strength: SUCCESS, 0
+unite_teams: INVALID_INPUT
+get_medals: SUCCESS, 3
+get_medals: SUCCESS, 3
+play_match: SUCCESS
+get_team_strength: SUCCESS, 900
+get_team_strength: SUCCESS, 0
+get_medals: SUCCESS, 4
+get_medals: SUCCESS, 4
+austerity_measures: SUCCESS, 0
+unite_teams: FAILURE
+unite_teams: FAILURE
+unite_teams: INVALID_INPUT
+unite_teams: INVALID_INPUT
+unite_teams: INVALID_INPUT
+unite_teams: FAILURE
+unite_teams: FAILURE
+get_team_strength: SUCCESS, 900
+get_team_strength: SUCCESS, 0
+unite_teams: SUCCESS
+get_team_strength: SUCCESS, 900
+get_team_strength: FAILURE
+remove_contestant: FAILURE
+unite_teams: FAILURE
+get_team_strength: SUCCESS, 900
+get_team_strength: SUCCESS, 1400
+get_medals: SUCCESS, 4
+get_medals: SUCCESS, 4
+unite_teams: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: FAILURE
+get_medals: SUCCESS, 4
+get_medals: SUCCESS, 4
+austerity_measures: FAILURE
+austerity_measures: SUCCESS, 0
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 2200
+austerity_measures: SUCCESS, 2200
+remove_team: FAILURE
+remove_contestant: FAILURE
+remove_contestant_from_team: SUCCESS
+remove_contestant: SUCCESS
+austerity_measures: SUCCESS, 0
+remove_contestant: FAILURE
+remove_contestant_from_team: SUCCESS
+remove_contestant: FAILURE
+remove_contestant_from_team: SUCCESS
+remove_contestant_from_team: FAILURE
+remove_contestant: SUCCESS
+austerity_measures: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+remove_contestant_from_team: SUCCESS
+austerity_measures: SUCCESS, 2200
+get_team_strength: SUCCESS, 1600
+remove_country: FAILURE
