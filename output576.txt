@@ -1,0 +1,188 @@
+add_country: SUCCESS
+add_team: SUCCESS
+add_team: SUCCESS
+add_team: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 3
+austerity_measures: SUCCESS, 3
+update_contestant_strength: SUCCESS
+update_contestant_strength: SUCCESS
+update_contestant_strength: SUCCESS
+update_contestant_strength: SUCCESS
+get_team_strength: SUCCESS, 210
+austerity_measures: SUCCESS, 300
+unite_teams: SUCCESS
+remove_contestant_from_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+update_contestant_strength: SUCCESS
+update_contestant_strength: SUCCESS
+update_contestant_strength: SUCCESS
+update_contestant_strength: SUCCESS
+get_team_strength: SUCCESS, 502
+austerity_measures: SUCCESS, 502
+austerity_measures: SUCCESS, 403
+unite_teams: SUCCESS
+get_team_strength: SUCCESS, 311
+get_team_strength: FAILURE
+austerity_measures: SUCCESS, 502
+update_contestant_strength: SUCCESS
+austerity_measures: SUCCESS, 702
+add_contestant_to_team: FAILURE
+add_contestant_to_team: FAILURE
+add_contestant_to_team: FAILURE
+add_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+update_contestant_strength: SUCCESS
+update_contestant_strength: SUCCESS
+update_contestant_strength: SUCCESS
+get_team_strength: FAILURE
+get_team_strength: SUCCESS, 3003
+get_team_strength: SUCCESS, 2203
+austerity_measures: SUCCESS, 3003
+unite_teams: FAILURE
+get_team_strength: SUCCESS, 3003
+austerity_measures: SUCCESS, 0
+unite_teams: SUCCESS
+get_team_strength: SUCCESS, 2203
+austerity_measures: SUCCESS, 3003
+update_contestant_strength: SUCCESS
+get_team_strength: SUCCESS, 1213
+austerity_measures: SUCCESS, 2013
+update_contestant_strength: SUCCESS
+update_contestant_strength: SUCCESS
+get_team_strength: SUCCESS, 1213
+austerity_measures: SUCCESS, 2013
