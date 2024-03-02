@@ -1299,7 +1299,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
              m22 = teamInCountry->m_secondThirdMax1STR->m_strength;
          }
          max2 = maxg(teamInCountry->m_firstThirdMax1ID->m_StrengthVersionThird->m_strength, m22, teamInCountry->m_lastThird1stMinID->m_StrengthVersionThird->m_strength);
-         if(teamInCountry->m_lastThird1stMinID->m_StrengthVersionThird->m_strength == teamInCountry->m_lastThirdMax1STR->m_strength)
+         if(teamInCountry->m_lastThird1stMinID->m_StrengthVersionThird->m_ID == teamInCountry->m_lastThirdMax1STR->m_ID)
          {
              max3 = teamInCountry->m_lastThirdMax2STR->m_strength;
          }
@@ -1321,11 +1321,11 @@ output_t<int> Olympics::austerity_measures(int teamId){
              m33 = teamInCountry->m_lastThirdMax1STR->m_strength;
          }
          max3 = maxg(m33, teamInCountry->m_secondThirdMax1ID->m_StrengthVersionThird->m_strength, teamInCountry->m_secondThirdMax2ID->m_StrengthVersionThird->m_strength);
-         if(teamInCountry->m_secondThirdMax1STR->m_strength != teamInCountry->m_secondThirdMax1ID->m_StrengthVersionThird->m_strength && teamInCountry->m_secondThirdMax1STR->m_strength != teamInCountry->m_secondThirdMax2ID->m_StrengthVersionThird->m_strength)
+         if(teamInCountry->m_secondThirdMax1STR->m_ID != teamInCountry->m_secondThirdMax1ID->m_StrengthVersionThird->m_ID && teamInCountry->m_secondThirdMax1STR->m_ID != teamInCountry->m_secondThirdMax2ID->m_StrengthVersionThird->m_ID)
          {
              m22 = teamInCountry->m_secondThirdMax1STR->m_strength;
          }
-         else if(teamInCountry->m_secondThirdMax2STR->m_strength != teamInCountry->m_secondThirdMax1ID->m_StrengthVersionThird->m_strength && teamInCountry->m_secondThirdMax2STR->m_strength != teamInCountry->m_secondThirdMax2ID->m_StrengthVersionThird->m_strength)
+         else if(teamInCountry->m_secondThirdMax2STR->m_ID != teamInCountry->m_secondThirdMax1ID->m_StrengthVersionThird->m_ID && teamInCountry->m_secondThirdMax2STR->m_ID != teamInCountry->m_secondThirdMax2ID->m_StrengthVersionThird->m_ID)
          {
              m22 = teamInCountry->m_secondThirdMax2STR->m_strength;
          }
@@ -1360,7 +1360,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
          int m23 = teamInCountry->m_lastThird1stMinID->m_StrengthVersionThird->m_strength;
          if(teamInCountry->m_secondThirdMin1STR->m_ID == teamInCountry->m_secondThird1stMinID->m_ID)
          {
-             if(teamInCountry->m_secondThirdMax1STR->m_strength == teamInCountry->m_secondThird2ndMinID->m_StrengthVersionThird->m_strength)
+             if(teamInCountry->m_secondThirdMax1STR->m_ID == teamInCountry->m_secondThird2ndMinID->m_StrengthVersionThird->m_ID)
              {
                  m22 = teamInCountry->m_secondThirdMax2STR->m_strength;
              }
@@ -1371,7 +1371,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
          }
          else
          {
-             if(teamInCountry->m_secondThirdMax1STR->m_strength == teamInCountry->m_secondThird1stMinID->m_StrengthVersionThird->m_strength)
+             if(teamInCountry->m_secondThirdMax1STR->m_ID == teamInCountry->m_secondThird1stMinID->m_StrengthVersionThird->m_ID)
              {
                  m22 = teamInCountry->m_secondThirdMax2STR->m_strength;
              }
@@ -1459,7 +1459,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
          }
          if(teamInCountry->m_secondThirdMin1STR->m_ID == teamInCountry->m_secondThirdMax1ID->m_ID)
          {
-             if(teamInCountry->m_secondThirdMax1STR->m_strength == teamInCountry->m_secondThirdMax2ID->m_StrengthVersionThird->m_strength)
+             if(teamInCountry->m_secondThirdMax1STR->m_ID == teamInCountry->m_secondThirdMax2ID->m_StrengthVersionThird->m_ID)
              {
                  m22 = teamInCountry->m_secondThirdMax2STR->m_strength;
              }
@@ -1471,7 +1471,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
          }
          else
          {
-             if(teamInCountry->m_secondThirdMax1STR->m_strength == teamInCountry->m_secondThirdMax1ID->m_StrengthVersionThird->m_strength)
+             if(teamInCountry->m_secondThirdMax1STR->m_ID == teamInCountry->m_secondThirdMax1ID->m_StrengthVersionThird->m_ID)
              {
                  m22 = teamInCountry->m_secondThirdMax2STR->m_strength;
              }
