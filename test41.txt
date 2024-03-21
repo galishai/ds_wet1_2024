@@ -314,7 +314,7 @@ add_contestant_to_team: SUCCESS
 austerity_measures: SUCCESS, 25494145
 add_contestant_to_team: SUCCESS
 add_contestant_to_team: SUCCESS
-austerity_measures: SUCCESS, 28774330
+austerity_measures: SUCCESS, 27432666
 add_team: SUCCESS
 remove_contestant_from_team: SUCCESS
 add_contestant: SUCCESS
@@ -1005,7 +1005,7 @@ add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
-austerity_measures: SUCCESS, 28300048
+austerity_measures: SUCCESS, 27309699
 add_team: SUCCESS
 austerity_measures: SUCCESS, 0
 add_contestant_to_team: SUCCESS
@@ -4036,7 +4036,7 @@ add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
-austerity_measures: SUCCESS, 25681452
+austerity_measures: SUCCESS, 25421178
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 get_strength: SUCCESS, 663579
@@ -4525,7 +4525,7 @@ add_contestant_to_team: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant_to_team: SUCCESS
-austerity_measures: SUCCESS, 29307419
+austerity_measures: SUCCESS, 28496013
 add_team: SUCCESS
 get_strength: SUCCESS, 8634436
 unite_teams: SUCCESS
@@ -5474,7 +5474,7 @@ add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
-austerity_measures: SUCCESS, 29714542
+austerity_measures: SUCCESS, 28942367
 add_contestant: SUCCESS
 add_contestant: SUCCESS
 add_contestant: SUCCESS
@@ -6461,7 +6461,7 @@ add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
-austerity_measures: SUCCESS, 25771157
+austerity_measures: SUCCESS, 25552131
 add_contestant_to_team: SUCCESS
 add_team: SUCCESS
 add_contestant_to_team: SUCCESS
@@ -6630,7 +6630,7 @@ add_contestant_to_team: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant_to_team: SUCCESS
-austerity_measures: SUCCESS, 25771157
+austerity_measures: SUCCESS, 25552131
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant: SUCCESS
@@ -9752,7 +9752,7 @@ add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
-austerity_measures: SUCCESS, 27225086
+austerity_measures: SUCCESS, 27205093
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 get_medals: SUCCESS, 3220240
@@ -9921,7 +9921,7 @@ add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
-austerity_measures: SUCCESS, 26676373
+austerity_measures: SUCCESS, 26665942
 get_strength: SUCCESS, 3801045
 add_country: SUCCESS
 add_team: SUCCESS
@@ -17742,7 +17742,7 @@ add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
-austerity_measures: SUCCESS, 27113223
+austerity_measures: SUCCESS, 27110501
 get_medals: SUCCESS, 9182631
 add_contestant_to_team: SUCCESS
 get_strength: SUCCESS, 6324730
@@ -17928,7 +17928,7 @@ add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
-austerity_measures: SUCCESS, 28485315
+austerity_measures: SUCCESS, 28440532
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 get_strength: SUCCESS, 5993951
@@ -18177,7 +18177,7 @@ add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
-austerity_measures: SUCCESS, 29286356
+austerity_measures: SUCCESS, 28634446
 update_contestant_strength: SUCCESS
 add_contestant: SUCCESS
 add_contestant: SUCCESS
@@ -18638,7 +18638,7 @@ add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
-austerity_measures: SUCCESS, 26524214
+austerity_measures: SUCCESS, 26408645
 get_strength: SUCCESS, 7300040
 add_team: SUCCESS
 add_contestant: SUCCESS
@@ -24940,7 +24940,7 @@ add_contestant_to_team: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant_to_team: SUCCESS
-austerity_measures: SUCCESS, 28925083
+austerity_measures: SUCCESS, 27791194
 get_medals: SUCCESS, 1192117
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
@@ -27072,7 +27072,7 @@ add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
-austerity_measures: SUCCESS, 25859693
+austerity_measures: SUCCESS, 25659848
 add_contestant: SUCCESS
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
@@ -27249,7 +27249,7 @@ add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
-austerity_measures: SUCCESS, 28930028
+austerity_measures: SUCCESS, 28806682
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant: SUCCESS
@@ -30199,7 +30199,7 @@ add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
 add_contestant: SUCCESS
 add_contestant_to_team: SUCCESS
-austerity_measures: SUCCESS, 25356019
+austerity_measures: SUCCESS, 24114682
 add_team: SUCCESS
 add_contestant_to_team: SUCCESS
 add_team: SUCCESS
