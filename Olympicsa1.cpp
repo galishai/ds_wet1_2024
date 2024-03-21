@@ -1239,7 +1239,7 @@ output_t<int> Olympics::austerity_measures(int teamId){
          max1 = teamInCountry->m_firstThirdMax1STR->m_strength;
          max2 = teamInCountry->m_secondThirdMax1STR->m_strength;
          max3 = teamInCountry->m_secondThirdMax2STR->m_strength;
-
+         s6 = max1 + max2 + max3; //TODO change
          //1,1,1
          s7 = get_team_strength(teamId).ans();
          return maxg(s1,s2,s3,s4,s5,s6,s7);
