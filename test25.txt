@@ -1,0 +1,472 @@
+add_country: SUCCESS
+add_country: SUCCESS
+add_country: SUCCESS
+add_team: SUCCESS
+add_team: SUCCESS
+add_team: SUCCESS
+add_team: SUCCESS
+add_team: SUCCESS
+add_team: SUCCESS
+add_team: SUCCESS
+add_team: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: FAILURE
+get_team_strength: INVALID_INPUT
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 0
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+get_team_strength: FAILURE
+get_team_strength: INVALID_INPUT
+add_contestant_to_team: SUCCESS
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+add_contestant: SUCCESS
+get_team_strength: SUCCESS, 11254021
+get_team_strength: SUCCESS, 11254021
+get_team_strength: INVALID_INPUT
+get_team_strength: SUCCESS, 11254021
+add_team: SUCCESS
+add_team: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: FAILURE
+get_team_strength: SUCCESS, 11254021
+get_team_strength: INVALID_INPUT
+get_team_strength: INVALID_INPUT
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+add_team: SUCCESS
+get_team_strength: INVALID_INPUT
+add_contestant_to_team: SUCCESS
+get_team_strength: INVALID_INPUT
+get_team_strength: SUCCESS, 0
+get_team_strength: FAILURE
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: FAILURE
+get_team_strength: FAILURE
+get_team_strength: FAILURE
+get_team_strength: FAILURE
+add_contestant: SUCCESS
+get_team_strength: INVALID_INPUT
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 0
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: FAILURE
+get_team_strength: SUCCESS, 0
+add_contestant_to_team: SUCCESS
+get_team_strength: INVALID_INPUT
+get_team_strength: SUCCESS, 17879037
+get_team_strength: FAILURE
+add_contestant_to_team: SUCCESS
+get_team_strength: INVALID_INPUT
+get_team_strength: FAILURE
+get_team_strength: FAILURE
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 19565109
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 19565109
+add_contestant_to_team: SUCCESS
+add_team: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: FAILURE
+add_contestant: SUCCESS
+get_team_strength: INVALID_INPUT
+add_contestant_to_team: SUCCESS
+get_team_strength: FAILURE
+add_contestant: SUCCESS
+get_team_strength: FAILURE
+get_team_strength: SUCCESS, 0
+add_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_team: SUCCESS
+get_team_strength: INVALID_INPUT
+add_contestant: SUCCESS
+get_team_strength: FAILURE
+get_team_strength: SUCCESS, 0
+remove_contestant_from_team: SUCCESS
+get_team_strength: FAILURE
+get_team_strength: FAILURE
+add_contestant: SUCCESS
+get_team_strength: INVALID_INPUT
+get_team_strength: SUCCESS, 0
+get_team_strength: INVALID_INPUT
+add_contestant_to_team: SUCCESS
+get_team_strength: FAILURE
+get_team_strength: INVALID_INPUT
+get_team_strength: FAILURE
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: FAILURE
+get_team_strength: FAILURE
+remove_contestant_from_team: SUCCESS
+add_team: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 0
+add_contestant_to_team: SUCCESS
+get_team_strength: FAILURE
+get_team_strength: INVALID_INPUT
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 0
+add_contestant_to_team: SUCCESS
+add_contestant: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+get_team_strength: INVALID_INPUT
+get_team_strength: INVALID_INPUT
+get_team_strength: FAILURE
+get_team_strength: FAILURE
+add_contestant: SUCCESS
+get_team_strength: SUCCESS, 0
+add_contestant_to_team: SUCCESS
+add_team: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: INVALID_INPUT
+add_contestant_to_team: SUCCESS
+add_team: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: INVALID_INPUT
+get_team_strength: INVALID_INPUT
+add_contestant: SUCCESS
+remove_contestant_from_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+add_contestant: SUCCESS
+get_team_strength: FAILURE
+add_team: SUCCESS
+add_contestant: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: INVALID_INPUT
+get_team_strength: INVALID_INPUT
+get_team_strength: INVALID_INPUT
+get_team_strength: SUCCESS, 0
+add_contestant_to_team: SUCCESS
+add_team: SUCCESS
+add_team: SUCCESS
+add_team: SUCCESS
+get_team_strength: INVALID_INPUT
+add_contestant: SUCCESS
+remove_contestant_from_team: SUCCESS
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+get_team_strength: SUCCESS, 19565109
+get_team_strength: INVALID_INPUT
+add_team: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+add_contestant: SUCCESS
+get_team_strength: FAILURE
+add_team: SUCCESS
+add_contestant: SUCCESS
+get_team_strength: SUCCESS, 0
+add_team: SUCCESS
+get_team_strength: SUCCESS, 0
+add_team: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: INVALID_INPUT
+get_team_strength: SUCCESS, 0
+add_contestant_to_team: SUCCESS
+get_team_strength: INVALID_INPUT
+get_team_strength: FAILURE
+get_team_strength: FAILURE
+get_team_strength: SUCCESS, 0
+add_team: SUCCESS
+get_team_strength: INVALID_INPUT
+get_team_strength: FAILURE
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+get_team_strength: INVALID_INPUT
+get_team_strength: SUCCESS, 0
+get_team_strength: INVALID_INPUT
+get_team_strength: SUCCESS, 0
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: INVALID_INPUT
+add_team: SUCCESS
+get_team_strength: SUCCESS, 14240353
+get_team_strength: INVALID_INPUT
+add_team: SUCCESS
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: INVALID_INPUT
+add_team: SUCCESS
+get_team_strength: FAILURE
+get_team_strength: SUCCESS, 0
+get_team_strength: INVALID_INPUT
+get_team_strength: FAILURE
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+get_team_strength: INVALID_INPUT
+get_team_strength: SUCCESS, 0
+add_team: SUCCESS
+get_team_strength: SUCCESS, 0
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: INVALID_INPUT
+get_team_strength: FAILURE
+add_contestant_to_team: SUCCESS
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+add_team: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: INVALID_INPUT
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 0
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_team: SUCCESS
+get_team_strength: INVALID_INPUT
+get_team_strength: INVALID_INPUT
+remove_contestant_from_team: SUCCESS
+get_team_strength: INVALID_INPUT
+get_team_strength: FAILURE
+add_contestant: SUCCESS
+get_team_strength: SUCCESS, 19565109
+get_team_strength: SUCCESS, 0
+get_team_strength: INVALID_INPUT
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+get_team_strength: FAILURE
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+get_team_strength: FAILURE
+get_team_strength: FAILURE
+add_contestant_to_team: SUCCESS
+get_team_strength: FAILURE
+add_contestant_to_team: SUCCESS
+get_team_strength: FAILURE
+get_team_strength: INVALID_INPUT
+add_contestant_to_team: SUCCESS
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+get_team_strength: FAILURE
+add_contestant_to_team: SUCCESS
+add_team: SUCCESS
+get_team_strength: INVALID_INPUT
+add_contestant_to_team: SUCCESS
+get_team_strength: INVALID_INPUT
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: INVALID_INPUT
+get_team_strength: FAILURE
+add_team: SUCCESS
+get_team_strength: INVALID_INPUT
+add_contestant_to_team: SUCCESS
+add_contestant: SUCCESS
+remove_contestant_from_team: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: FAILURE
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+remove_contestant_from_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+get_team_strength: SUCCESS, 0
+remove_contestant_from_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+add_team: SUCCESS
+add_team: SUCCESS
+add_team: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: FAILURE
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: FAILURE
+add_contestant: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+get_team_strength: FAILURE
+get_team_strength: SUCCESS, 0
+add_team: SUCCESS
+get_team_strength: INVALID_INPUT
+get_team_strength: SUCCESS, 0
+get_team_strength: FAILURE
+get_team_strength: INVALID_INPUT
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+add_team: SUCCESS
+get_team_strength: SUCCESS, 0
+add_team: SUCCESS
+add_team: SUCCESS
+get_team_strength: FAILURE
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+add_contestant: SUCCESS
+get_team_strength: INVALID_INPUT
+get_team_strength: SUCCESS, 0
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 14240353
+get_team_strength: FAILURE
+get_team_strength: INVALID_INPUT
+add_team: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 0
+remove_contestant_from_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_contestant: SUCCESS
+get_team_strength: FAILURE
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+add_team: SUCCESS
+get_team_strength: SUCCESS, 15967287
+get_team_strength: FAILURE
+get_team_strength: SUCCESS, 14240353
+add_contestant: SUCCESS
+get_team_strength: INVALID_INPUT
+get_team_strength: FAILURE
+remove_contestant_from_team: SUCCESS
+add_contestant: SUCCESS
+get_team_strength: INVALID_INPUT
+get_team_strength: SUCCESS, 0
+get_team_strength: INVALID_INPUT
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: INVALID_INPUT
+add_contestant_to_team: SUCCESS
+add_contestant: SUCCESS
+get_team_strength: INVALID_INPUT
+get_team_strength: FAILURE
+add_team: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: FAILURE
+get_team_strength: INVALID_INPUT
+get_team_strength: SUCCESS, 0
+get_team_strength: INVALID_INPUT
+get_team_strength: SUCCESS, 0
+add_team: SUCCESS
+get_team_strength: FAILURE
+get_team_strength: FAILURE
+get_team_strength: FAILURE
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 15008962
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+get_team_strength: FAILURE
+get_team_strength: SUCCESS, 0
+get_team_strength: FAILURE
+get_team_strength: INVALID_INPUT
+get_team_strength: INVALID_INPUT
+get_team_strength: SUCCESS, 0
+get_team_strength: INVALID_INPUT
+remove_contestant_from_team: SUCCESS
+get_team_strength: INVALID_INPUT
+add_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+add_contestant_to_team: SUCCESS
+add_team: SUCCESS
+get_team_strength: INVALID_INPUT
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+get_team_strength: INVALID_INPUT
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: INVALID_INPUT
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+add_contestant: SUCCESS
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+add_contestant_to_team: SUCCESS
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 0
+add_team: SUCCESS
+add_contestant: SUCCESS
+get_team_strength: INVALID_INPUT
+add_contestant_to_team: FAILURE
+add_contestant_to_team: SUCCESS
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 0
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+get_team_strength: FAILURE
+get_team_strength: SUCCESS, 0
+add_contestant: SUCCESS
+add_contestant_to_team: SUCCESS
+remove_contestant_from_team: SUCCESS
+add_team: SUCCESS
+get_team_strength: FAILURE
+add_contestant_to_team: SUCCESS
+get_team_strength: SUCCESS, 0
