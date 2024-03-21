@@ -450,7 +450,7 @@ add_contestant_to_team: SUCCESS
 remove_contestant_from_team: SUCCESS
 add_contestant_to_team: SUCCESS
 get_team_strength: SUCCESS, 0
-get_team_strength: SUCCESS, 0
+get_team_strength: SUCCESS, 6548712
 add_team: SUCCESS
 add_contestant: SUCCESS
 get_team_strength: INVALID_INPUT
