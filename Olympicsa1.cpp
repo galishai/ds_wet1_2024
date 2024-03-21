@@ -1310,7 +1310,16 @@ output_t<int> Olympics::austerity_measures(int teamId){
          s2 = max1 + max2 + max3;
 
          //0,0,3
-         max1 = teamInCountry->m_firstThirdMax1STR->m_strength;
+
+         if(teamInCountry->m_firstThirdMax1ID->m_ID == teamInCountry->m_firstThirdMax1STR->m_ID) //TODO change
+         {
+             max1 = teamInCountry->m_firstThirdMax2STR->m_strength; //TODO change
+         }
+         else//TODO change
+         {
+             max1 = teamInCountry->m_firstThirdMax1STR->m_strength; //TODO change
+         }
+         //max1 = teamInCountry->m_firstThirdMax1STR->m_strength;
          int m33;
          if(teamInCountry->m_lastThirdID->m_treeSize == 3)
          {
