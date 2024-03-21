@@ -181,6 +181,7 @@ static void addPlayer(Team* team, PlayerByID *playerID, PlayerByStrength *player
                 movePlayerID->m_StrengthVersionThird = movePlayerSTR;
                 movePlayerSTR->m_playerInIDThird = movePlayerID;
                 movePlayerID->m_currentThird = 2;
+                playerID->m_currentThird = 1; //TODO changed
             }
         } else if (team->m_lastThirdID->isEmpty())
         {
